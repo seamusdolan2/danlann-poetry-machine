@@ -88,7 +88,7 @@
     /* ── Layout classes (left | center | display) ────────────────── */
 
     #fl718-quote-block.fl718-layout-left   { text-align: left; }
-    #fl718-quote-block.fl718-layout-center { text-align: center; max-width: 65ch; }
+    #fl718-quote-block.fl718-layout-center { text-align: center; max-width: 65ch; margin-left: auto; margin-right: auto; }
     #fl718-quote-block.fl718-layout-display { text-align: center; }
 
     .fl718-layout-left .fl718-rule       { margin-left: 0; margin-right: auto; }
@@ -189,22 +189,6 @@
     .fl718-font-system     .fl718-quote-text { font-family: 'DM Mono', 'Courier New', monospace; font-weight: 300; letter-spacing: -0.015em; }
     .fl718-font-expressive .fl718-quote-text { font-family: 'Abril Fatface', Georgia, serif; font-style: normal; font-weight: 400; }
 
-    /* ── Mockup label ────────────────────────────────────────────── */
-
-    #fl718-mockup-label {
-      position: fixed;
-      bottom: 1.5rem;
-      right: 1.75rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.5rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: #f5f0e8;
-      opacity: 0.1;
-      pointer-events: none;
-      user-select: none;
-      z-index: 100;
-    }
 
     /* ── Scroll hint ─────────────────────────────────────────────── */
 
@@ -541,8 +525,7 @@
     </div>
   </div>
 
-  <div id="fl718-mockup-label" aria-hidden="true">Mockup</div>
-  <div id="fl718-scroll-hint" aria-hidden="true">Scroll or swipe</div>
+<div id="fl718-scroll-hint" aria-hidden="true">Scroll or swipe</div>
 
   <!-- Quote data -->
   <script src="quotes.js"></script>
@@ -581,6 +564,36 @@
       var currentQuote     = null;
       var deck             = [];
 
+      // ── Persistent deck (cross-session quote coverage) ────────────
+      // Stores remaining quote IDs so users progress through all 111
+      // quotes before any repeats, across separate page visits.
+
+      var DECK_STORAGE_KEY = 'fl718-quotes-deck-v1';
+
+      function saveDeckState() {
+        try {
+          var ids = deck.map(function (i) { return fl718Quotes[i].id; });
+          localStorage.setItem(DECK_STORAGE_KEY, JSON.stringify(ids));
+        } catch (e) {}
+      }
+
+      function loadDeckState() {
+        try {
+          var raw = localStorage.getItem(DECK_STORAGE_KEY);
+          if (!raw) return null;
+          var savedIds = JSON.parse(raw);
+          // Build id→index map
+          var idMap = {};
+          fl718Quotes.forEach(function (q, i) { idMap[q.id] = i; });
+          // Keep only IDs that still exist in the current quote set
+          var indices = savedIds
+            .filter(function (id) { return idMap[id] !== undefined; })
+            .map(function (id) { return idMap[id] });
+          // Require at least 3 remaining to bother resuming
+          return indices.length >= 3 ? indices : null;
+        } catch (e) { return null; }
+      }
+
       var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       // ── SVG filter refs ───────────────────────────────────────────
@@ -593,7 +606,10 @@
 
       // Smoke / darkroom
       var darkroomEntranceTween = null;
-      var usedFallback          = false;  // smoke-dissolve breath-on-glass flag
+      // usedFallback: set true when smoke-dissolve used the breath-on-glass path.
+      // The exit function reads this to decide which teardown path to run.
+      // This is intentional — exit must match the entrance that was actually used.
+      var usedFallback          = false;
 
       // Card-shuffle
       var prevWasFallback = false;
@@ -635,17 +651,28 @@
       // ── Deck / shuffle ────────────────────────────────────────────
 
       function buildDeck(excludeIndex) {
-        var indices = fl718Quotes.map(function (_, i) { return i; });
-        // Fisher-Yates shuffle
-        for (var i = indices.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * (i + 1));
-          var tmp = indices[i]; indices[i] = indices[j]; indices[j] = tmp;
+        // Try to resume a saved deck from a previous session first.
+        // This is what makes all 111 quotes cycle through before any repeat.
+        var indices = loadDeckState();
+
+        if (!indices) {
+          // No saved deck — full cycle complete or first ever visit.
+          // Build a fresh shuffled deck from all quotes.
+          indices = fl718Quotes.map(function (_, i) { return i; });
+          // Fisher-Yates shuffle
+          for (var i = indices.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = indices[i]; indices[i] = indices[j]; indices[j] = tmp;
+          }
         }
+
         // Prevent same quote at deck boundary
         if (excludeIndex !== undefined && indices[0] === excludeIndex && indices.length > 1) {
           indices.push(indices.shift());
         }
-        // Ensure all 12 animations appear in the first ~20 quotes
+        // Ensure all 12 animations appear in the first ~20 quotes of whatever
+        // remains — runs on resumed decks too, so animation variety is
+        // guaranteed at the start of every session.
         ensureAnimationCoverage(indices);
         // Separate consecutive same-author and same-animation quotes
         separateAdjacent(indices, excludeIndex);
@@ -726,8 +753,14 @@
       }
 
       function nextIndex() {
-        if (deck.length === 0) deck = buildDeck(currentIndex);
-        return deck.shift();
+        if (deck.length === 0) {
+          // Full cycle complete — clear storage so buildDeck starts fresh.
+          try { localStorage.removeItem(DECK_STORAGE_KEY); } catch (e) {}
+          deck = buildDeck(currentIndex);
+        }
+        var idx = deck.shift();
+        saveDeckState(); // persist remaining deck after each quote consumed
+        return idx;
       }
 
       // ── Length class ──────────────────────────────────────────────
@@ -749,6 +782,7 @@
       function renderQuote(quote) {
         quoteEl.textContent = quote.text;
         nameEl.textContent  = quote.attribution;
+        block.dataset.quoteId = quote.id; // qa-hook: lets tests identify current quote by ID
 
         if (quote.source) {
           sourceEl.textContent = quote.source;
@@ -818,6 +852,9 @@
 
       function runEntrance(quote, cb) {
         if (prefersReducedMotion) { simpleFade('in', cb); return; }
+        // key = quote.entrance if set (optional override), else quote.animation
+        // Note: 'telegraph' and 'breath-on-glass' are internal helper names used
+        // within animation functions — they are NOT valid values for quotes.js fields.
         var key = quote.entrance || quote.animation;
         switch (key) {
           case 'letterpress':      entranceLetterpress(quote, cb);  break;
@@ -1021,8 +1058,7 @@
           setTimeout(function () {
             if (char.classList.contains('space')) { char.style.opacity = '1'; return; }
             char.classList.add('flickering');
-            char.addEventListener('animationend', function onEnd() {
-              char.removeEventListener('animationend', onEnd);
+            char.addEventListener('animationend', function () {
               char.classList.remove('flickering');
               char.classList.add('lit');
             }, { once: true });
@@ -1815,7 +1851,7 @@
       function nmBuildVintageMapLayer(parentSvg, W, H) {
         var g = nmSvgEl('g', { id: 'fl718-nm-vintage', opacity: '0' });
         g.appendChild(nmSvgEl('image', {
-          href: '../concepts/phase 3/navigation-map.png',
+          href: 'navigation-map.png',
           x: '0', y: '0', width: W, height: H,
           preserveAspectRatio: 'xMidYMid slice', opacity: '0.10'
         }));
@@ -1891,6 +1927,7 @@
           gsap.to(block, {
             filter: 'blur(0px)', opacity: 1, duration: 1.8, ease: 'power1.out',
             onComplete: function () {
+              block.style.filter = '';
               gsap.to([footerEl, ruleTopEl, ruleBotEl], { opacity: 1, duration: 0.5, stagger: 0.08 });
               nmDelay(cb, 600);
             }
@@ -2362,12 +2399,25 @@
       });
 
       // ================================================================
+      // QA DEBUG HOOK — exposes engine state for Playwright tests
+      // Safe to leave in production: read-only, zero overhead
+      // ================================================================
+
+      window.fl718Debug = {
+        get transitioning() { return isTransitioning; },
+        get currentQuoteId() {
+          return currentQuote ? currentQuote.id : null;
+        }
+      };
+
+      // ================================================================
       // INIT
       // ================================================================
 
       function init() {
         deck         = buildDeck();
         currentIndex = deck.shift();
+        saveDeckState(); // persist remaining deck after first quote consumed
         currentQuote = fl718Quotes[currentIndex];
         renderQuote(currentQuote);
 

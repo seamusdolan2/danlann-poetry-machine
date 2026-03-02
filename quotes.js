@@ -16,7 +16,7 @@
 //   center   — max-width 65ch, centered. Short lyric quotes, poems with intentional short lines.
 //   display  — full width, centered, oversized type. Very short power statements.
 
-const fl718Quotes = [
+var fl718Quotes = [
 
   // ── ANNIE DILLARD ─────────────────────────────────────────────────────────
   {
@@ -379,7 +379,7 @@ const fl718Quotes = [
   },
   {
     id: 30,
-    text: "I'm ahead, I'm a man\nI'm the first mammal to wear pants, yeah\nI'm at peace with my lust\nI can kill 'cause in god I trust, yeah\nIt's evolution, baby, yeah\n\nAdmire me, admire my home\nAdmire my son, he's my clone\nThis land is mine, this land is free\nI'll do what I want but irresponsibly\nIt's evolution, baby",
+    text: "I'm ahead, I'm a man\nI'm the first mammal to wear pants\nI'm at peace with my lust\nI can kill 'cause in god I trust\nIt's evolution, baby\n\nAdmire me, admire my home\nAdmire my son, he's my clone\nThis land is mine, this land is free\nI'll do what I want but irresponsibly\nIt's evolution, baby",
     attribution: "— Pearl Jam",
     source: "Do the Evolution",
     mood: "defiant-political",
@@ -1173,7 +1173,7 @@ const fl718Quotes = [
   // ── ZACK HEMSEY ───────────────────────────────────────────────────────────
   {
     id: 96,
-    text: "Am I seeing something real or is it smoke?\nAm I on the ground or am I hung without a rope?\nAnd this is fantasy or from the dream have I awoke?\nAm I steady on the path or am I clinging onto hope?\nTo mean something, we live and we strive for it\nTo feel something, we fight and survive for it\nTo love something, we scream out and cry for it\nBut tell me now, are you willing to die for it?\nGiving is the levee that will bound a man's greed\nPrison is the dwelling when you take no leave\nFaster than a sparrow flies, trap the cupid by surprise\nGrab his bow and arrow and shoot straight into the empty sky\nYou can spend eternity immersed in what's inside\nBut if you're searching for a purpose, then no purpose will you find",
+    text: "Am I seeing something real or is it smoke?\nAm I on the ground or am I hung without a rope?\nAnd this is fantasy or from the dream have I awoke?\nAm I steady on the path or am I clinging onto hope?\n\nTo mean something, we live and we strive for it\nTo feel something, we fight and survive for it\nTo love something, we scream out and cry for it\nBut tell me now, are you willing to die for it?\n\nGiving is the levee that will bound a man's greed\nPrison is the dwelling when you take no leave\nFaster than a sparrow flies, trap the cupid by surprise\nGrab his bow and arrow and shoot straight into the empty sky\n\nYou can spend eternity immersed in what's inside\nBut if you're searching for a purpose, then no purpose will you find",
     attribution: "— Zack Hemsey",
     source: "Lessons from a Nomad",
     mood: "contemplative-ancient",
@@ -1365,7 +1365,7 @@ const fl718Quotes = [
     animation: "data-dissolve",
     entrance: "smoke-dissolve",
     font: "fl718-font-brutal",
-    layout: "center"
+    layout: "left"
   },
 
   // ── SÉAMUS DOLAN (cont.) ──────────────────────────────────────────────────
