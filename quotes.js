@@ -532,7 +532,7 @@ var fl718Quotes = [
     attribution: "— Canibus",
     source: "Master Thesis",
     mood: "contemplative-ancient",
-    length: "standard",
+    length: "long",
     animation: "navigation-map",
     font: "fl718-font-system",
     layout: "left"
@@ -716,7 +716,7 @@ var fl718Quotes = [
     attribution: "— Donna Tartt",
     source: "The Secret History",
     mood: "contemplative-ancient",
-    length: "standard",
+    length: "long",
     animation: "pond-ripple",
     font: "fl718-font-literary",
     layout: "left"
@@ -884,7 +884,7 @@ var fl718Quotes = [
     attribution: "— Aesop Rock",
     source: "Battery",
     mood: "dark-raw",
-    length: "standard",
+    length: "long",
     animation: "string-stitch",
     font: "fl718-font-brutal",
     layout: "left"
@@ -1203,7 +1203,7 @@ var fl718Quotes = [
     attribution: "— Thomas Gray",
     source: "Ode on a Distant Prospect of Eton College",
     mood: "dark-raw",
-    length: "standard",
+    length: "long",
     animation: "string-stitch",
     font: "fl718-font-literary",
     layout: "left"
@@ -1240,7 +1240,7 @@ var fl718Quotes = [
     attribution: "— George Santayana",
     source: "The Unknowable",
     mood: "contemplative-ancient",
-    length: "standard",
+    length: "long",
     animation: "darkroom-develop",
     font: "fl718-font-archival",
     layout: "left"
@@ -1375,7 +1375,7 @@ var fl718Quotes = [
     attribution: "— Séamus Dolan",
     source: "Tears of Egypt Series",
     mood: "dark-raw",
-    length: "standard",
+    length: "long",
     animation: "darkroom-develop",
     font: "fl718-font-literary",
     layout: "left"
