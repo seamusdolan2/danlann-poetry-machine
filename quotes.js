@@ -56,7 +56,7 @@ var fl718Quotes = [
   },
   {
     id: 107,
-    text: "To see the full miraculous essentiality of the color blue is to be grateful with no necessity for a word of thanks. To see fully, the beauty of a daughter's face is to be fully grateful without having to seek a God to thank him. To sit among friends and strangers, hearing many voices, strange opinions; to intuit inner lives beneath surface lives, to inhabit many worlds at once in this world, to be a someone amongst all other someones, and therefore to make a conversation without saying a word, is to deepen our sense of presence and therefore our natural sense of thankfulness that everything happens both with us and without us, that we are participants and witnesses all at once.",
+    text: "To see the full miraculous essentiality of the color blue is to be grateful with no necessity for a word of thanks. To see fully, the beauty of a daughter\u2019s face is to be fully grateful without having to seek a God to thank him. To sit among friends and strangers, hearing many voices, strange opinions; to intuit inner lives beneath surface lives, to inhabit many worlds at once in this world, to be a someone amongst all other someones, and therefore to make a conversation without saying a word, is to deepen our sense of presence and therefore our natural sense of thankfulness that everything happens both with us and without us, that we are participants and witnesses all at once.",
     attribution: "— David Whyte",
     source: "On Gratitude",
     mood: "tender-literary",
@@ -113,7 +113,7 @@ var fl718Quotes = [
   },
   {
     id: 8,
-    text: "You should not take old people who are already dead seriously. It does them injustice. We immortals do not like things to be taken seriously. We like joking. Seriousness, young man, is an accident of time. It consists, I don't mind telling you in confidence, in putting too high a value on time. I, too, once put too high a value on time. For that reason I wished to be a hundred years old. In eternity, however, there is no time, you see. Eternity is a mere moment, just long enough for a joke.",
+    text: "You should not take old people who are already dead seriously. It does them injustice. We immortals do not like things to be taken seriously. We like joking. Seriousness, young man, is an accident of time. It consists, I don\u2019t mind telling you in confidence, in putting too high a value on time. I, too, once put too high a value on time. For that reason I wished to be a hundred years old. In eternity, however, there is no time, you see. Eternity is a mere moment, just long enough for a joke.",
     attribution: "— Hermann Hesse",
     source: "Steppenwolf",
     mood: "contemplative-ancient",
@@ -137,7 +137,7 @@ var fl718Quotes = [
   },
   {
     id: 10,
-    text: "What the pigeon doesn't take today,\nthe rat will crown tomorrow.",
+    text: "What the pigeon doesn\u2019t take today,\nthe rat will crown tomorrow.",
     attribution: "— Séamus Dolan",
     source: null,
     mood: "dark-raw",
@@ -165,7 +165,6 @@ var fl718Quotes = [
     mood: "contemplative-ancient",
     length: "short",
     animation: "data-dissolve",
-    entrance: "smoke-dissolve",
     font: "fl718-font-system",
     layout: "display"
   },
@@ -243,7 +242,7 @@ var fl718Quotes = [
   // ── HOMER ─────────────────────────────────────────────────────────────────
   {
     id: 19,
-    text: "There is the heat of love, the pulsing rush of longing, the lover's whisper, irresistible — magic to make the sanest man go mad.",
+    text: "There is the heat of love, the pulsing rush of longing, the lover\u2019s whisper, irresistible \u2014 magic to make the sanest man go mad.",
     attribution: "— Homer",
     source: "The Iliad",
     mood: "tender-literary",
@@ -267,7 +266,7 @@ var fl718Quotes = [
   // ── TV ON THE RADIO ───────────────────────────────────────────────────────
   {
     id: 21,
-    text: "I know it's strange another way to get to know you\nYou'll never know unless we go so let me show you\nI know it's strange another way to get to know you\nWe've got till noon, here comes the moon\nSo let it show you\n\nMy mind has changed\nMy body's frame, but, God, I like it\nMy heart's aflame\nMy body's strained, but, God, I like it",
+    text: "I know it\u2019s strange another way to get to know you\nYou\u2019ll never know unless we go so let me show you\nI know it\u2019s strange another way to get to know you\nWe\u2019ve got till noon, here comes the moon\nSo let it show you\n\nMy mind has changed\nMy body\u2019s frame, but, God, I like it\nMy heart\u2019s aflame\nMy body\u2019s strained, but, God, I like it",
     attribution: "— TV on the Radio",
     source: "Wolf Like Me",
     mood: "wild-electric",
@@ -319,19 +318,18 @@ var fl718Quotes = [
   // ── RAGE AGAINST THE MACHINE ──────────────────────────────────────────────
   {
     id: 25,
-    text: "The main attraction, distraction\nGot ya number than number than numb\nEmpty ya pockets, son, they got you thinkin' that\nWhat ya need is what they selling\nMake you think that buying is rebelling\nFrom the theaters to malls on every shore\nThe thin line between entertainment and war\nThe frontline is everywhere\nThere be no shelter here\nSpielberg, the nightmare works so push it far\nAmistad was a whip, the truth was feathered and tarred\nMemories erased, burned and scarred\nTrade in ya history for a VCR\nCinema, simulated life, ill drama\nFourth Reich culture, Americana\nChained to the dream they got you searchin' for\nThe thin line between entertainment and war",
+    text: "The main attraction, distraction\nGot ya number than number than numb\nEmpty ya pockets, son, they got you thinkin\u2019 that\nWhat ya need is what they selling\nMake you think that buying is rebelling\nFrom the theaters to malls on every shore\nThe thin line between entertainment and war\nThe frontline is everywhere\nThere be no shelter here\nSpielberg, the nightmare works so push it far\nAmistad was a whip, the truth was feathered and tarred\nMemories erased, burned and scarred\nTrade in ya history for a VCR\nCinema, simulated life, ill drama\nFourth Reich culture, Americana\nChained to the dream they got you searchin\u2019 for\nThe thin line between entertainment and war",
     attribution: "— Rage Against the Machine",
     source: "No Shelter",
     mood: "defiant-political",
     length: "long",
     animation: "data-dissolve",
-    entrance: "smoke-dissolve",
     font: "fl718-font-brutal",
     layout: "left"
   },
   {
     id: 26,
-    text: "There's a mass without roofs\nA prison to fill\nA country's soul that reads post no bills\nA strike and a line of cops outside of tha mill\nThere's a right to obey\nAnd a right to kill",
+    text: "There\u2019s a mass without roofs\nA prison to fill\nA country\u2019s soul that reads post no bills\nA strike and a line of cops outside of tha mill\nThere\u2019s a right to obey\nAnd a right to kill",
     attribution: "— Rage Against the Machine",
     source: "Calm Like a Bomb",
     mood: "defiant-political",
@@ -344,7 +342,7 @@ var fl718Quotes = [
   // ── BRAND NEW ─────────────────────────────────────────────────────────────
   {
     id: 27,
-    text: "Well if we take all these things\nand we bury them fast\nAnd we'll pray that they turn into seeds,\nto roots and then grass\nIt'd be all right, it's all right,\nit'd be easier that way.\n\nOr if the sky opened up and started pouring rain\nLike he knew it was time\nto start things over again\nIt'd be all right, it's all right,\nit'd be easier that way.",
+    text: "Well if we take all these things\nand we bury them fast\nAnd we\u2019ll pray that they turn into seeds,\nto roots and then grass\nIt\u2019d be all right, it\u2019s all right,\nit\u2019d be easier that way.\n\nOr if the sky opened up and started pouring rain\nLike he knew it was time\nto start things over again\nIt\u2019d be all right, it\u2019s all right,\nit\u2019d be easier that way.",
     attribution: "— Brand New",
     source: "Daisy",
     mood: "dark-raw",
@@ -355,7 +353,7 @@ var fl718Quotes = [
   },
   {
     id: 28,
-    text: "Hey hey hey, Mr. Hangman\nGo get your rope\nYour daughters weren't careful\nI fear that I am a slippery slope\nNow even if I lay my head down at night\nAfter a day I got perfectly right\nShe won't know\nShe won't know",
+    text: "Hey, hey, hey, Mr. Hangman\nYou go get your rope\nYour daughters weren\u2019t careful\nI fear that I am a slippery slope\n\nNow even if I lay my head down at night\nAfter a day I got perfectly right\nShe won\u2019t know\nShe won\u2019t know",
     attribution: "— Brand New",
     source: "You Won't Know",
     mood: "dark-raw",
@@ -368,7 +366,7 @@ var fl718Quotes = [
   // ── PEARL JAM ─────────────────────────────────────────────────────────────
   {
     id: 29,
-    text: "Alone, listless\nBreakfast table in an otherwise empty room\nYoung girl, violence\nCenter of her own attention\nThe mother reads aloud, child tries to understand it\nTries to make her proud\nThe shades go down, it's in her head\nPainted room, can't deny there's something wrong\nDon't call me daughter, not fit to\nThe picture kept will remind me\nDon't call me daughter, not fit to\nThe picture kept will remind me\nDon't call me",
+    text: "Alone, listless\nBreakfast table in an otherwise empty room\nYoung girl, violence\nCenter of her own attention\nThe mother reads aloud, child tries to understand it\nTries to make her proud\nThe shades go down, it\u2019s in her head\nPainted room, can\u2019t deny there\u2019s something wrong\nDon\u2019t call me daughter, not fit to\nThe picture kept will remind me\nDon\u2019t call me daughter, not fit to\nThe picture kept will remind me\nDon\u2019t call me",
     attribution: "— Pearl Jam",
     source: "Daughter",
     mood: "dark-raw",
@@ -379,7 +377,7 @@ var fl718Quotes = [
   },
   {
     id: 30,
-    text: "I'm ahead, I'm a man\nI'm the first mammal to wear pants\nI'm at peace with my lust\nI can kill 'cause in god I trust\nIt's evolution, baby\n\nAdmire me, admire my home\nAdmire my son, he's my clone\nThis land is mine, this land is free\nI'll do what I want but irresponsibly\nIt's evolution, baby",
+    text: "I\u2019m ahead, I\u2019m a man\nI\u2019m the first mammal to wear pants\nI\u2019m at peace with my lust\nI can kill \u2019cause in god I trust\nIt\u2019s evolution, baby\n\nAdmire me, admire my home\nAdmire my son, he\u2019s my clone\nThis land is mine, this land is free\nI\u2019ll do what I want but irresponsibly\nIt\u2019s evolution, baby",
     attribution: "— Pearl Jam",
     source: "Do the Evolution",
     mood: "defiant-political",
@@ -405,7 +403,7 @@ var fl718Quotes = [
   // ── SEAN PRICE ────────────────────────────────────────────────────────────
   {
     id: 32,
-    text: "You can catch me in ya tenement, doing too much drugs\nStraight Jimi Hendrexin', pop's was the drinker, my mom's on dope\nPick up they bad habit, now the God do both\nPoppin' some pills, sniffin' a line, drinkin' some wine\nUp in the club, grabbin' my gun, fucking wit shine",
+    text: "You can catch me in ya tenement, doing too much drugs\nStraight Jimi Hendrexin\u2019, pop\u2019s was the drinker,\nmy mom\u2019s on dope\nPick up they bad habit, now the God do both\nPoppin\u2019 some pills, sniffin\u2019 a line, drinkin\u2019 some wine\nUp in the club, grabbin\u2019 my gun, fucking wit shine",
     attribution: "— Sean Price",
     source: "Boom Bye Yeah",
     mood: "dark-raw",
@@ -429,7 +427,7 @@ var fl718Quotes = [
   },
   {
     id: 34,
-    text: "Roll the windows down this cool night air is curious\nLet the whole world look in\nWho cares who sees what tonight?\nRoll these misty windows\nDown to catch my breath and then\nGo and go and go, just drive me home and back again",
+    text: "Roll the windows down this cool night air is curious\nLet the whole world look in\nWho cares who sees what tonight?\nRoll these misty windows\nDown to catch my breath and then\nGo and go and go,\njust drive me home and back again",
     attribution: "— Deftones",
     source: null,
     mood: "tender-literary",
@@ -477,11 +475,11 @@ var fl718Quotes = [
   // ── CHARLES CHAPLIN ───────────────────────────────────────────────────────
   {
     id: 38,
-    text: "The trouble is you won't fight: you've given in, continually dwelling on sickness and death. But, there is something just as inevitable as death — and that's life! life! life! Think of the power that's in the universe, moving the earth, growing the trees, and that's the same power within you — if you only have courage and the will to use it!",
+    text: "The trouble is you won\u2019t fight: you\u2019ve given in, continually dwelling on sickness and death. But, there is something just as inevitable as death \u2014 and that\u2019s life! life! life! Think of the power that\u2019s in the universe, moving the earth, growing the trees, and that\u2019s the same power within you \u2014 if you only have courage and the will to use it!",
     attribution: "— Charles Chaplin",
     source: "Limelight (1952)",
     mood: "wild-electric",
-    length: "standard",
+    length: "long",
     animation: "marquee-bulb",
     font: "fl718-font-expressive",
     layout: "left"
@@ -514,13 +512,12 @@ var fl718Quotes = [
   // ── NINE INCH NAILS ───────────────────────────────────────────────────────
   {
     id: 41,
-    text: "Still feel it all slipping away but it doesn't matter anymore\nEverybody's still chipping away but it doesn't matter anymore\nLook through these blackened eyes\nYou'll see ten thousand lies\nMy lips may promise but my heart is a whore",
+    text: "Still feel it all slipping away but it doesn\u2019t matter anymore\nEverybody\u2019s still chipping away but it doesn\u2019t matter anymore\nLook through these blackened eyes\nYou\u2019ll see ten thousand lies\nMy lips may promise but my heart is a whore",
     attribution: "— Nine Inch Nails",
     source: "Last",
     mood: "dark-raw",
     length: "standard",
     animation: "data-dissolve",
-    entrance: "smoke-dissolve",
     font: "fl718-font-brutal",
     layout: "left"
   },
@@ -613,7 +610,6 @@ var fl718Quotes = [
     mood: "defiant-political",
     length: "short",
     animation: "data-dissolve",
-    entrance: "smoke-dissolve",
     font: "fl718-font-brutal",
     layout: "display"
   },
@@ -647,7 +643,6 @@ var fl718Quotes = [
     mood: "defiant-political",
     length: "short",
     animation: "data-dissolve",
-    entrance: "smoke-dissolve",
     font: "fl718-font-brutal",
     layout: "display"
   },
@@ -661,6 +656,83 @@ var fl718Quotes = [
     animation: "smoke-dissolve",
     font: "fl718-font-archival",
     layout: "display"
+  },
+  {
+    id: 124,
+    text: "The strange thing is that when a word is well established as a swear word, it seems to lose its original meaning; that is, it loses the thing that made it into a swear word. A word becomes an oath because it means a certain thing, and, because it has become an oath, it ceases to mean that thing.",
+    attribution: "— George Orwell",
+    source: "Down and Out in Paris and London",
+    mood: "contemplative-ancient",
+    length: "standard",
+    animation: "letterpress",
+    font: "fl718-font-archival",
+    layout: "left"
+  },
+  {
+    id: 123,
+    text: "The educated man pictures a horde of submen, wanting only a day\u2019s liberty to loot his house, burn his books, and set him to work minding a machine or sweeping out a lavatory. \u2018Anything,\u2019 he thinks, \u2018any injustice, sooner than let that mob loose.\u2019 He does not see that since there is no difference between the mass of rich and poor, there is no question of setting the mob loose. The mob is in fact loose now, and \u2014 in the shape of rich men \u2014 is using its power to set up enormous treadmills of boredom, such as \u2018smart\u2019 hotels.",
+    attribution: "— George Orwell",
+    source: "Down and Out in Paris and London",
+    mood: "defiant-political",
+    length: "long",
+    animation: "navigation-map",
+    font: "fl718-font-archival",
+    layout: "left"
+  },
+  {
+    id: 122,
+    text: "Money has become the grand test of virtue. By this test beggars fail, and for this they are despised. If one could earn even ten pounds a week at begging, it would become a respectable profession immediately. A beggar, looked at realistically, is simply a businessman, getting his living, like other businessmen, in the way that comes to hand. He has not, more than most modern people, sold his honour; he has merely made the mistake of choosing a trade at which it is impossible to grow rich.",
+    attribution: "— George Orwell",
+    source: "Down and Out in Paris and London",
+    mood: "defiant-political",
+    length: "long",
+    animation: "string-stitch",
+    font: "fl718-font-archival",
+    layout: "left"
+  },
+  {
+    id: 121,
+    text: "In practice nobody cares if work is useful or useless, productive or parasitic; the sole thing demanded is that it shall be profitable. In all the modern talk about energy, efficiency, social service and the rest of it, what meaning is there except \u201CGet money, get it legally, and get a lot of it\u201D? Money has become the grand test of virtue. By this test beggars fail, and for this they are despised.",
+    attribution: "— George Orwell",
+    source: "Down and Out in Paris and London",
+    mood: "defiant-political",
+    length: "standard",
+    animation: "letterpress",
+    font: "fl718-font-archival",
+    layout: "left"
+  },
+  {
+    id: 120,
+    text: "The Paris slums are a gathering-place for eccentric people — people who have fallen into solitary, half-mad grooves of life and given up trying to be normal or decent. Poverty frees them from ordinary standards of behavior, just as money frees people from work.",
+    attribution: "— George Orwell",
+    source: "Down and Out in Paris and London",
+    mood: "defiant-political",
+    length: "standard",
+    animation: "etch-a-sketch",
+    font: "fl718-font-archival",
+    layout: "left"
+  },
+  {
+    id: 119,
+    text: "The stars are a free show; it don\u2019t cost anything to use your eyes.",
+    attribution: "— George Orwell",
+    source: "Down and Out in Paris and London",
+    mood: "contemplative-ancient",
+    length: "short",
+    animation: "pond-ripple",
+    font: "fl718-font-archival",
+    layout: "left"
+  },
+  {
+    id: 118,
+    text: "It is a feeling of relief, almost of pleasure, at knowing yourself at last genuinely down and out. You have talked so often of going to the dogs — and well, here are the dogs, and you have reached them, and you can stand it. It takes off a lot of anxiety.",
+    attribution: "— George Orwell",
+    source: "Down and Out in Paris and London",
+    mood: "contemplative-ancient",
+    length: "standard",
+    animation: "navigation-map",
+    font: "fl718-font-archival",
+    layout: "left"
   },
 
   // ── ANTOINE DE SAINT-EXUPÉRY ──────────────────────────────────────────────
@@ -679,7 +751,7 @@ var fl718Quotes = [
   // ── DONNA TARTT ───────────────────────────────────────────────────────────
   {
     id: 55,
-    text: "When we are sad — at least I am like this — it can be comforting to cling to familiar objects, to the things that don't change. Your descriptions of the desert — that oceanic, endless glare — are terrible but also very beautiful. Maybe there's something to be said for the rawness and emptiness of it all. The light of long ago is different from the light of today and yet here, in this house, I'm reminded of the past at every turn. But when I think of you, it's as if you've gone away to sea on a ship — out in a foreign brightness where there are no paths, only stars and sky.",
+    text: "When we are sad \u2014 at least I am like this \u2014 it can be comforting to cling to familiar objects, to the things that don\u2019t change. Your descriptions of the desert \u2014 that oceanic, endless glare \u2014 are terrible but also very beautiful. Maybe there\u2019s something to be said for the rawness and emptiness of it all. The light of long ago is different from the light of today and yet here, in this house, I\u2019m reminded of the past at every turn. But when I think of you, it\u2019s as if you\u2019ve gone away to sea on a ship \u2014 out in a foreign brightness where there are no paths, only stars and sky.",
     attribution: "— Donna Tartt",
     source: "The Goldfinch",
     mood: "tender-literary",
@@ -690,7 +762,7 @@ var fl718Quotes = [
   },
   {
     id: 57,
-    text: "Only here's what I really, really want someone to explain to me. What if one happens to be possessed of a heart that can't be trusted--? What if the heart, for its own unfathomable reasons, leads one willfully and in a cloud of unspeakable radiance away from health, domesticity, civic responsibility and strong social connections and all the blandly-held common virtues and instead straight toward a beautiful flare of ruin, self-immolation, disaster?...If your deepest self is singing and coaxing you straight toward the bonfire, is it better to turn away? Stop your ears with wax? Ignore all the perverse glory your heart is screaming at you? Set yourself on the course that will lead you dutifully towards the norm, reasonable hours and regular medical check-ups, stable relationships and steady career advancement the New York Times and brunch on Sunday, all with the promise of being somehow a better person? Or...is it better to throw yourself head first and laughing into the holy rage calling your name?",
+    text: "Only here\u2019s what I really, really want someone to explain to me. What if one happens to be possessed of a heart that can\u2019t be trusted\u2014? What if the heart, for its own unfathomable reasons, leads one willfully and in a cloud of unspeakable radiance away from health, domesticity, civic responsibility and strong social connections and all the blandly-held common virtues and instead straight toward a beautiful flare of ruin, self-immolation, disaster?\u2026If your deepest self is singing and coaxing you straight toward the bonfire, is it better to turn away? Stop your ears with wax? Ignore all the perverse glory your heart is screaming at you? Set yourself on the course that will lead you dutifully towards the norm, reasonable hours and regular medical check-ups, stable relationships and steady career advancement the New York Times and brunch on Sunday, all with the promise of being somehow a better person? Or\u2026is it better to throw yourself head first and laughing into the holy rage calling your name?",
     attribution: "— Donna Tartt",
     source: "The Goldfinch",
     mood: "wild-electric",
@@ -712,7 +784,7 @@ var fl718Quotes = [
   },
   {
     id: 59,
-    text: "Some things are too terrible to grasp at once. Other things — naked, sputtering, indelible in their horror — are too terrible to really grasp ever at all. It is only later, in solitude, in memory that the realization dawns: when the ashes are cold; when the mourners have departed; when one looks around and finds oneself — quite to one's surprise — in an entirely different world.",
+    text: "Some things are too terrible to grasp at once. Other things — naked, sputtering, indelible in their horror — are too terrible to really grasp ever at all. It is only later, in solitude, in memory that the realization dawns: when the ashes are cold; when the mourners have departed; when one looks around and finds oneself \u2014 quite to one\u2019s surprise \u2014 in an entirely different world.",
     attribution: "— Donna Tartt",
     source: "The Secret History",
     mood: "contemplative-ancient",
@@ -790,7 +862,7 @@ var fl718Quotes = [
   // ── DR. SEUSS ─────────────────────────────────────────────────────────────
   {
     id: 65,
-    text: "It's fun to have fun, but you have to know how.",
+    text: "It\u2019s fun to have fun, but you have to know how.",
     attribution: "— Dr. Seuss",
     source: null,
     mood: "wild-electric",
@@ -803,7 +875,7 @@ var fl718Quotes = [
   // ── AESOP ROCK ────────────────────────────────────────────────────────────
   {
     id: 66,
-    text: "Just a little bruise in the back of the pews\nActing amused with a mask and them Vatican blues\nFor in the eyes of the organization I was raised in\nAes' is just another sinning brick in Hell's basement\nCubicle adjacent to the killers and rapists\nFor what? Drugs and fucking, it's part of growing up\nLike cuffs over dumb shits is better than the schools\nI'm not an asshole I'm just a little confused\nJust a lit fuse in the back of the pews\nWatching a thousand flavors of the same God feud\nI figure ultimate-peace is the common theme\nSo it's a no-brainer \u201Cpeace\u201D when the blood hit the screen\nGot a basic good and evil sensibility born\nGood neighbor know a halo wouldn't fit over horns\nI'm more science than faith, I'm more karma than bread and booze\nI'm not an asshole I'm just a little confused",
+    text: "Just a little bruise in the back of the pews\nActing amused with a mask and them Vatican blues\nFor in the eyes of the organization I was raised in\nAes\u2019 is just another sinning brick in Hell\u2019s basement\nCubicle adjacent to the killers and rapists\nFor what? Drugs and fucking, it\u2019s part of growing up\nLike cuffs over dumb shits is better than the schools\nI\u2019m not an asshole I\u2019m just a little confused\nJust a lit fuse in the back of the pews\nWatching a thousand flavors of the same God feud\nI figure ultimate-peace is the common theme\nSo it\u2019s a no-brainer \u201Cpeace\u201D when the blood hit the screen\nGot a basic good and evil sensibility born\nGood neighbor know a halo wouldn\u2019t fit over horns\nI\u2019m more science than faith, I\u2019m more karma than bread and booze\nI\u2019m not an asshole I\u2019m just a little confused",
     attribution: "— Aesop Rock",
     source: "Holy Smoke",
     mood: "defiant-political",
@@ -847,7 +919,7 @@ var fl718Quotes = [
   },
   {
     id: 70,
-    text: "Yo change the fuckin channel\nI burn a Coma candle\nWhen the flame fades, consider my flatline a soldier's sample\nWe them cats talkin' noise behind that New York trash heap\nWhere the stench of commuter briefcase replaces a bad sleep",
+    text: "Yo change the fuckin channel\nI burn a Coma candle\nWhen the flame fades, consider my flatline a soldier\u2019s sample\nWe them cats talkin\u2019 noise behind that New York trash heap\nWhere the stench of commuter briefcase replaces a bad sleep",
     attribution: "— Aesop Rock",
     source: "Battery",
     mood: "dark-raw",
@@ -858,7 +930,7 @@ var fl718Quotes = [
   },
   {
     id: 71,
-    text: "There's smoke in my iris\nBut I painted a sunny day on the insides of my eyelids\nSo I'm ready now (What you ready for?)\nI'm ready for life in this city\nAnd my wings have grown almost enough to lift me",
+    text: "There\u2019s smoke in my iris\nBut I painted a sunny day\non the insides of my eyelids\nSo I\u2019m ready now (What you ready for?)\nI\u2019m ready for life in this city\nAnd my wings have grown almost enough to lift me",
     attribution: "— Aesop Rock",
     source: "Battery",
     mood: "wild-electric",
@@ -869,7 +941,7 @@ var fl718Quotes = [
   },
   {
     id: 72,
-    text: "I'm not trying to graduate to life with a personalized barstool\nHead in a jar on the desk, feet dangling in a shark pool",
+    text: "I\u2019m not trying to graduate to life\nwith a personalized barstool\nHead in a jar on the desk, feet dangling in a shark pool",
     attribution: "— Aesop Rock",
     source: null,
     mood: "dark-raw",
@@ -880,7 +952,7 @@ var fl718Quotes = [
   },
   {
     id: 73,
-    text: "Well it appears the scars of learning have spoken\nSome are burning, some are frozen\nSome deserve tall tales, some have wrote them\nSome are just a brutal repercussion of devotion\nMine are all of the above 'cause everything leads to erosion",
+    text: "Well it appears the scars of learning have spoken\nSome are burning, some are frozen\nSome deserve tall tales, some have wrote them\nSome are just a brutal repercussion of devotion\nMine are all of the above \u2019cause everything leads to erosion",
     attribution: "— Aesop Rock",
     source: "Battery",
     mood: "dark-raw",
@@ -891,7 +963,7 @@ var fl718Quotes = [
   },
   {
     id: 74,
-    text: "And I ain't getting any younger\nMy knuckles wear their bruises well\nI've yet to lose that hunger\nBut only time can tell",
+    text: "And I ain\u2019t getting any younger\nMy knuckles wear their bruises well\nI\u2019ve yet to lose that hunger\nBut only time can tell",
     attribution: "— Aesop Rock",
     source: "Battery",
     mood: "dark-raw",
@@ -954,7 +1026,7 @@ var fl718Quotes = [
   },
   {
     id: 79,
-    text: "The wrath of God lies sleeping. It was hid a million years before men were and only men have the power to wake it. Hell aint half full. Hear me. Ye carry war of a madman's making onto a foreign land. Ye'll wake more than the dogs.",
+    text: "The wrath of God lies sleeping. It was hid a million years before men were and only men have the power to wake it. Hell ain\u2019t half full. Hear me. Ye carry war of a madman\u2019s making onto a foreign land. Ye\u2019ll wake more than the dogs.",
     attribution: "— Cormac McCarthy",
     source: "Blood Meridian",
     mood: "dark-raw",
@@ -965,7 +1037,7 @@ var fl718Quotes = [
   },
   {
     id: 80,
-    text: "The truth about the world, he said, is that anything is possible. Had you not seen it all from birth and thereby bled it of its strangeness it would appear to you for what it is, a hat trick in a medicine show, a fevered dream, a trance bepopulate with chimeras having neither analogue nor precedent, an itinerant carnival, a migratory tentshow whose ultimate destination after many a pitch in many a mudded field is unspeakable and calamitous beyond reckoning. The universe is no narrow thing and the order within it is not constrained by any latitude in its conception to repeat what exists in one part in any other part. Even in this world more things exist without our knowledge than with it and the order in creation which you see is that which you have put there, like a string in a maze, so that you shall not lose your way. For existence has its own order and that no man's mind can compass, that mind itself being but a fact among others.",
+    text: "The truth about the world, he said, is that anything is possible. Had you not seen it all from birth and thereby bled it of its strangeness it would appear to you for what it is, a hat trick in a medicine show, a fevered dream, a trance bepopulate with chimeras having neither analogue nor precedent, an itinerant carnival, a migratory tentshow whose ultimate destination after many a pitch in many a mudded field is unspeakable and calamitous beyond reckoning. The universe is no narrow thing and the order within it is not constrained by any latitude in its conception to repeat what exists in one part in any other part. Even in this world more things exist without our knowledge than with it and the order in creation which you see is that which you have put there, like a string in a maze, so that you shall not lose your way. For existence has its own order and that no man\u2019s mind can compass, that mind itself being but a fact among others.",
     attribution: "— Cormac McCarthy",
     source: "Blood Meridian",
     mood: "wild-electric",
@@ -1009,7 +1081,7 @@ var fl718Quotes = [
     source: "The Stranger",
     mood: "contemplative-ancient",
     length: "standard",
-    animation: "pond-ripple",
+    animation: "navigation-map",
     font: "fl718-font-literary",
     layout: "left"
   },
@@ -1035,7 +1107,7 @@ var fl718Quotes = [
     source: "Medea",
     mood: "dark-raw",
     length: "short",
-    animation: "pond-ripple",
+    animation: "navigation-map",
     font: "fl718-font-archival",
     layout: "display"
   },
@@ -1069,7 +1141,7 @@ var fl718Quotes = [
   // ── KHALED HOSSEINI ───────────────────────────────────────────────────────
   {
     id: 88,
-    text: "That same night, I wrote my first short story. It took me thirty minutes. It was a dark little tale about a man who found a magic cup and learned that if he wept into the cup, his tears turned into pearls. But even though he had always been poor, he was a happy man and rarely shed a tear. So he found ways to make himself sad so that his tears could make him rich. As the pearls piled up, so did his greed grow. The story ended with the man sitting on a mountain of pearls, knife in hand, weeping helplessly into the cup with his beloved wife's slain body in his arms.",
+    text: "That same night, I wrote my first short story. It took me thirty minutes. It was a dark little tale about a man who found a magic cup and learned that if he wept into the cup, his tears turned into pearls. But even though he had always been poor, he was a happy man and rarely shed a tear. So he found ways to make himself sad so that his tears could make him rich. As the pearls piled up, so did his greed grow. The story ended with the man sitting on a mountain of pearls, knife in hand, weeping helplessly into the cup with his beloved wife\u2019s slain body in his arms.",
     attribution: "— Khaled Hosseini",
     source: "The Kite Runner",
     mood: "dark-raw",
@@ -1082,7 +1154,7 @@ var fl718Quotes = [
   // ── FRANCES HODGSON BURNETT ───────────────────────────────────────────────
   {
     id: 89,
-    text: "Of course there must be lots of Magic in the world, but people don't know what it is like or how to make it. Perhaps the beginning is just to say nice things are going to happen until you make them happen.",
+    text: "Of course there must be lots of Magic in the world, but people don\u2019t know what it is like or how to make it. Perhaps the beginning is just to say nice things are going to happen until you make them happen.",
     attribution: "— Frances Hodgson Burnett",
     source: "The Secret Garden",
     mood: "wild-electric",
@@ -1108,7 +1180,7 @@ var fl718Quotes = [
   // ── TERENCE McKENNA ───────────────────────────────────────────────────────
   {
     id: 91,
-    text: "Nature loves courage. You make the commitment and nature will respond to that commitment by removing impossible obstacles. Dream the impossible dream and the world will not grind you under, it will lift you up. This is the trick. This is what all these teachers and philosophers who really counted, who really touched the alchemical gold, this is what they understood. This is the shamanic dance in the waterfall. This is how magic is done. By hurling yourself into the abyss and discovering it's a feather bed.",
+    text: "Nature loves courage. You make the commitment and nature will respond to that commitment by removing impossible obstacles. Dream the impossible dream and the world will not grind you under, it will lift you up. This is the trick. This is what all these teachers and philosophers who really counted, who really touched the alchemical gold, this is what they understood. This is the shamanic dance in the waterfall. This is how magic is done. By hurling yourself into the abyss and discovering it\u2019s a feather bed.",
     attribution: "— Terence McKenna",
     source: null,
     mood: "wild-electric",
@@ -1147,7 +1219,7 @@ var fl718Quotes = [
   // ── THE CHIEFTAINS ────────────────────────────────────────────────────────
   {
     id: 94,
-    text: "As down the glen one Easter morn\nTo a city fair rode I\nThere armed lines of marching men\nIn squadrons passed me by\n\nNo pipe did hum\nNo battle drum did sound its loud tattoo\nBut the Angelus Bells o'er the Liffey swells\nRang out in the foggy dew",
+    text: "As down the glen one Easter morn\nTo a city fair rode I\nThere armed lines of marching men\nIn squadrons passed me by\n\nNo pipe did hum\nNo battle drum did sound its loud tattoo\nBut the Angelus Bells o\u2019er the Liffey swells\nRang out in the foggy dew",
     attribution: "— The Chieftains",
     source: "Foggy Dew (traditional)",
     mood: "contemplative-ancient",
@@ -1160,7 +1232,7 @@ var fl718Quotes = [
   // ── BAD RELIGION ──────────────────────────────────────────────────────────
   {
     id: 95,
-    text: "Hey, brother Christian with your high and mighty errand\nYour actions speak so loud, I can't hear a word you're saying\nHey, sister Bleeding Heart with all of your compassion\nYour labors soothe the hurt, but can't assuage temptation",
+    text: "Hey, brother Christian\nwith your high and mighty errand\nYour actions speak so loud,\nI can\u2019t hear a word you\u2019re saying\nHey, sister Bleeding Heart\nwith all of your compassion\nYour labors soothe the hurt,\nbut can\u2019t assuage temptation",
     attribution: "— Bad Religion",
     source: "I Want to Conquer the World",
     mood: "defiant-political",
@@ -1173,7 +1245,7 @@ var fl718Quotes = [
   // ── ZACK HEMSEY ───────────────────────────────────────────────────────────
   {
     id: 96,
-    text: "Am I seeing something real or is it smoke?\nAm I on the ground or am I hung without a rope?\nAnd this is fantasy or from the dream have I awoke?\nAm I steady on the path or am I clinging onto hope?\n\nTo mean something, we live and we strive for it\nTo feel something, we fight and survive for it\nTo love something, we scream out and cry for it\nBut tell me now, are you willing to die for it?\n\nGiving is the levee that will bound a man's greed\nPrison is the dwelling when you take no leave\nFaster than a sparrow flies, trap the cupid by surprise\nGrab his bow and arrow and shoot straight into the empty sky\n\nYou can spend eternity immersed in what's inside\nBut if you're searching for a purpose, then no purpose will you find",
+    text: "Am I seeing something real or is it smoke?\nAm I on the ground or am I hung without a rope?\nAnd this is fantasy or from the dream have I awoke?\nAm I steady on the path or am I clinging onto hope?\n\nTo mean something, we live and we strive for it\nTo feel something, we fight and survive for it\nTo love something, we scream out and cry for it\nBut tell me now, are you willing to die for it?\n\nGiving is the levee that will bound a man\u2019s greed\nPrison is the dwelling when you take no leave\nFaster than a sparrow flies, trap the cupid by surprise\nGrab his bow and arrow and shoot straight into the empty sky\n\nYou can spend eternity immersed in what\u2019s inside\nBut if you\u2019re searching for a purpose, then no purpose will you find",
     attribution: "— Zack Hemsey",
     source: "Lessons from a Nomad",
     mood: "contemplative-ancient",
@@ -1212,7 +1284,7 @@ var fl718Quotes = [
   // ── CHARLES BUKOWSKI ──────────────────────────────────────────────────────
   {
     id: 99,
-    text: "If you're going to try, go all the way.\nOtherwise, don't even start.\nThis could mean losing girlfriends, wives, relatives and maybe even your mind.\nIt could mean not eating for three or four days.\nIt could mean freezing on a park bench.\nIt could mean jail.\nIt could mean derision.\nIt could mean mockery — isolation.\nIsolation is a gift.\nAll the others are a test of your endurance,\nof how much you really want to do it.\nAnd, you'll do it, despite rejection and the worst odds.\nAnd it will be better than anything else you can imagine.\nIf you're going to try, go all the way.\nThere is no other feeling like that.\nYou will be alone with the gods,\nand the nights will flame with fire.\nYou will ride life straight to perfect laughter.\nIt's the only good fight there is.",
+    text: "If you\u2019re going to try, go all the way.\nOtherwise, don\u2019t even start.\nThis could mean losing girlfriends, wives, relatives and maybe even your mind.\nIt could mean not eating for three or four days.\nIt could mean freezing on a park bench.\nIt could mean jail.\nIt could mean derision.\nIt could mean mockery \u2014 isolation.\nIsolation is a gift.\nAll the others are a test of your endurance,\nof how much you really want to do it.\nAnd, you\u2019ll do it, despite rejection and the worst odds.\nAnd it will be better than anything else you can imagine.\nIf you\u2019re going to try, go all the way.\nThere is no other feeling like that.\nYou will be alone with the gods,\nand the nights will flame with fire.\nYou will ride life straight to perfect laughter.\nIt\u2019s the only good fight there is.",
     attribution: "— Charles Bukowski",
     source: "Roll the Dice",
     mood: "dark-raw",
@@ -1223,7 +1295,7 @@ var fl718Quotes = [
   },
   {
     id: 100,
-    text: "your life is your life\ndon't let it be clubbed into dank submission.\nbe on the watch.\nthere are ways out.\nthere is a light somewhere.\nit may not be much light but\nit beats the darkness.\nbe on the watch.\nthe gods will offer you chances.\nknow them.\ntake them.\nyou can't beat death but\nyou can beat death in life, sometimes.\nand the more often you learn to do it,\nthe more light there will be.\nyour life is your life.\nknow it while you have it.\nyou are marvelous\nthe gods wait to delight\nin you.",
+    text: "your life is your life\ndon\u2019t let it be clubbed into dank submission.\nbe on the watch.\nthere are ways out.\nthere is a light somewhere.\nit may not be much light but\nit beats the darkness.\nbe on the watch.\nthe gods will offer you chances.\nknow them.\ntake them.\nyou can\u2019t beat death but\nyou can beat death in life, sometimes.\nand the more often you learn to do it,\nthe more light there will be.\nyour life is your life.\nknow it while you have it.\nyou are marvelous\nthe gods wait to delight\nin you.",
     attribution: "— Charles Bukowski",
     source: "The Laughing Heart",
     mood: "dark-raw",
@@ -1249,13 +1321,12 @@ var fl718Quotes = [
   // ── RICHARD P. FEYNMAN ────────────────────────────────────────────────────
   {
     id: 102,
-    text: "I think it's much more interesting to live not knowing than to have answers which might be wrong. I have approximate answers and possible beliefs and different degrees of uncertainty about different things, but I am not absolutely sure of anything and there are many things I don't know anything about, such as whether it means anything to ask why we're here. I don't have to know an answer. I don't feel frightened not knowing things, by being lost in a mysterious universe without any purpose, which is the way it really is as far as I can tell.",
+    text: "I think it\u2019s much more interesting to live not knowing than to have answers which might be wrong. I have approximate answers and possible beliefs and different degrees of uncertainty about different things, but I am not absolutely sure of anything and there are many things I don\u2019t know anything about, such as whether it means anything to ask why we\u2019re here. I don\u2019t have to know an answer. I don\u2019t feel frightened not knowing things, by being lost in a mysterious universe without any purpose, which is the way it really is as far as I can tell.",
     attribution: "— Richard P. Feynman",
     source: null,
     mood: "contemplative-ancient",
     length: "long",
     animation: "data-dissolve",
-    entrance: "smoke-dissolve",
     font: "fl718-font-system",
     layout: "left"
   },
@@ -1267,7 +1338,7 @@ var fl718Quotes = [
     attribution: "— Immortal Technique",
     source: "Caught in a Hustle",
     mood: "defiant-political",
-    length: "standard",
+    length: "long",
     animation: "data-dissolve",
     font: "fl718-font-brutal",
     layout: "left"
@@ -1276,7 +1347,7 @@ var fl718Quotes = [
   // ── TOOL ──────────────────────────────────────────────────────────────────
   {
     id: 104,
-    text: "Join in my\nJoin in my child\nAnd listen, digging through\nMy old numb shadow\nMy shadow's shedding skin\nI've been picking scabs again\nI'm down, digging through\nMy old muscles looking for a clue",
+    text: "Join in my\nJoin in my child\nAnd listen, digging through\nMy old numb shadow\nMy shadow\u2019s shedding skin\nI\u2019ve been picking scabs again\nI\u2019m down, digging through\nMy old muscles looking for a clue",
     attribution: "— Tool",
     source: "Forty Six & 2",
     mood: "dark-raw",
@@ -1289,11 +1360,11 @@ var fl718Quotes = [
   // ── DEAD PREZ ─────────────────────────────────────────────────────────────
   {
     id: 105,
-    text: "I say we all rush the pentagon, pull out guns\nAnd grab the intercom, my first words will be\nI believe man made god, outta ignorance and fear\nIf God made man, then why the hell would he put us here?\nI thought he's supposed to be the all loving\nThe same God who let Hitler put the Jews in the oven\nWe don't fall for the regular shit, they try to feed us\nAll this half-ass leadership, flippin' position\nThey turn politician and shut the hell up and follow tradition\nFor your TV screen is telling lies to your vision",
+    text: "I say we all rush the pentagon, pull out guns\nAnd grab the intercom, my first words will be\nI believe man made god, outta ignorance and fear\nIf God made man, then why the hell would he put us here?\nI thought he\u2019s supposed to be the all loving\nThe same God who let Hitler put the Jews in the oven\nWe don\u2019t fall for the regular shit, they try to feed us\nAll this half-ass leadership, flippin\u2019 position\nThey turn politician and shut the hell up and follow tradition\nFor your TV screen is telling lies to your vision",
     attribution: "— dead prez",
     source: "Propaganda",
     mood: "defiant-political",
-    length: "standard",
+    length: "long",
     animation: "data-dissolve",
     font: "fl718-font-brutal",
     layout: "left"
@@ -1309,7 +1380,7 @@ var fl718Quotes = [
     length: "short",
     animation: "marquee-bulb",
     font: "fl718-font-literary",
-    layout: "center"
+    layout: "left"
   },
 
   // ── HAKUIN EKAKU (Zen) ────────────────────────────────────────────────────
@@ -1318,7 +1389,7 @@ var fl718Quotes = [
   // ── HUNTER S. THOMPSON ──────────────────────────────────────────────────────
   {
     id: 108,
-    text: "We were somewhere around Barstow on the edge of the desert when the drugs began to take hold. I remember saying something like 'I feel a bit lightheaded; maybe you should drive. . . .' And suddenly there was a terrible roar all around us and the sky was full of what looked like huge bats, all swooping and screeching and diving around the car, which was going about a hundred miles an hour with the top down to Las Vegas. And a voice was screaming 'Holy Jesus! What are these goddamn animals?'",
+    text: "We were somewhere around Barstow on the edge of the desert when the drugs began to take hold. I remember saying something like \u2018I feel a bit lightheaded; maybe you should drive\u2026.\u2019 And suddenly there was a terrible roar all around us and the sky was full of what looked like huge bats, all swooping and screeching and diving around the car, which was going about a hundred miles an hour with the top down to Las Vegas. And a voice was screaming \u2018Holy Jesus! What are these goddamn animals?\u2019",
     attribution: "— Hunter S. Thompson",
     source: "Fear and Loathing in Las Vegas",
     mood: "wild-electric",
@@ -1331,7 +1402,7 @@ var fl718Quotes = [
   // ── HUNTER S. THOMPSON (cont.) ───────────────────────────────────────────
   {
     id: 109,
-    text: "Then it was quiet again. My attorney had taken his shirt off and was pouring beer on his chest, to facilitate the tanning process. \"What the hell are you yelling about?\" he muttered, staring up at the sun with his eyes closed and covered with wraparound Spanish sunglasses. \"Never mind,\" I said. \"It's your turn to drive.\" I hit the brakes and aimed the Great Red Shark toward the shoulder of the highway. No point mentioning those bats, I thought. The poor bastard will see them soon enough.",
+    text: "Then it was quiet again. My attorney had taken his shirt off and was pouring beer on his chest, to facilitate the tanning process. \u201CWhat the hell are you yelling about?\u201D he muttered, staring up at the sun with his eyes closed and covered with wraparound Spanish sunglasses. \u201CNever mind,\u201D I said. \u201CIt\u2019s your turn to drive.\u201D I hit the brakes and aimed the Great Red Shark toward the shoulder of the highway. No point mentioning those bats, I thought. The poor bastard will see them soon enough.",
     attribution: "— Hunter S. Thompson",
     source: "Fear and Loathing in Las Vegas",
     mood: "wild-electric",
@@ -1344,11 +1415,11 @@ var fl718Quotes = [
   // ── BAD RELIGION ────────────────────────────────────────────────────────────
   {
     id: 110,
-    text: "There's no vestige of beginning, no prospect of an end\nWhen we all disintegrate, it will all happen again, yeah\nIf you came to conquer, you'll be king for a day\nBut you too will deteriorate and quickly fade away\n\nAnd believe these words you hear when you think your path is clear\nWe have no control\nWe have no control\nWe have no control\nWe do not understand, you have no control\nYou are not in command\n\nYou have no control\nWe have no control\nNo control, no control\nYou have no control",
+    text: "There\u2019s no vestige of beginning, no prospect of an end\nWhen we all disintegrate, it will all happen again, yeah\nIf you came to conquer, you\u2019ll be king for a day\nBut you too will deteriorate and quickly fade away\n\nAnd believe these words you hear when you think your path is clear\nWe have no control\nWe have no control\nWe have no control\nWe do not understand, you have no control\nYou are not in command\n\nYou have no control\nWe have no control\nNo control, no control\nYou have no control",
     attribution: "— Bad Religion",
     source: "No Control",
     mood: "defiant-political",
-    length: "standard",
+    length: "long",
     animation: "letterpress",
     font: "fl718-font-brutal",
     layout: "left"
@@ -1363,7 +1434,6 @@ var fl718Quotes = [
     mood: "defiant-political",
     length: "standard",
     animation: "data-dissolve",
-    entrance: "smoke-dissolve",
     font: "fl718-font-brutal",
     layout: "left"
   },
@@ -1371,13 +1441,78 @@ var fl718Quotes = [
   // ── SÉAMUS DOLAN (cont.) ──────────────────────────────────────────────────
   {
     id: 112,
-    text: "Sometimes six or seven whiskeys leave you feeling loose around the edges. More than a few of those whiskeys had sand in them. Sure, I was in Egypt, but nowhere near the desert. I was hanging off a jagged chair in a haggard bar in the center of Alexandria. What the fuck am I drinking whiskey and sand on a Tuesday at 11:30 in the morning for?",
+    text: "Sometimes six or seven whiskeys leave you feeling loose around the edges. More than a few of those whiskeys had sand in them. Sure, I was in Egypt, but nowhere near the desert.\nI was hanging off a jagged chair in a haggard bar in the center of Alexandria. What the fuck am I drinking whiskey and sand on a Tuesday at 11:30 in the morning for?",
     attribution: "— Séamus Dolan",
     source: "Tears of Egypt Series",
     mood: "dark-raw",
     length: "long",
     animation: "darkroom-develop",
     font: "fl718-font-literary",
+    layout: "left"
+  },
+
+  // ── DON DELILLO ───────────────────────────────────────────────────────────
+  {
+    id: 113,
+    text: "I am chairman of the department of Hitler studies at the College-on-the-Hill. I invented Hitler studies in North America in March of 1968. It was a cold bright day with intermittent winds out of the east. When I suggested to the chancellor that we might build a whole department around Hitler\u2019s life and work, he was quick to see the possibilities. It was an immediate and electrifying success. The chancellor went on to serve as adviser to Nixon, Ford and Carter before his death on a ski lift in Austria.",
+    attribution: "— Don DeLillo",
+    source: "White Noise",
+    mood: "wild-electric",
+    length: "long",
+    animation: "string-stitch",
+    font: "fl718-font-literary",
+    layout: "left"
+  },
+
+  // ── CANIBUS ───────────────────────────────────────────────────────────────
+  {
+    id: 114,
+    text: "A wise man sees failure as progress\nA fool divorces his knowledge and misses the logic\nAnd loses his soul in the process\nObsessed with nonsense with a caricature that has no content",
+    attribution: "— Canibus",
+    source: "Poet Laureate II",
+    mood: "defiant-political",
+    length: "standard",
+    animation: "etch-a-sketch",
+    font: "fl718-font-brutal",
+    layout: "left"
+  },
+
+  // ── SÉAMUS DOLAN (cont.) ──────────────────────────────────────────────────
+  {
+    id: 115,
+    text: "Bulletproof Vests and Rolex Watches? What the fuck did I get myself into.",
+    attribution: "— Séamus Dolan",
+    source: null,
+    mood: "dark-raw",
+    length: "standard",
+    animation: "marquee-bulb",
+    font: "fl718-font-brutal",
+    layout: "display"
+  },
+
+  // ── DONNA TARTT ───────────────────────────────────────────────────────────
+  {
+    id: 116,
+    text: "There are such things as ghosts. People everywhere have always known that. And we believe in them every bit as much as Homer did. Only now, we call them by different names. Memory. The unconscious.",
+    attribution: "— Donna Tartt",
+    source: "The Secret History",
+    mood: "tender-literary",
+    length: "standard",
+    animation: "pond-ripple",
+    font: "fl718-font-literary",
+    layout: "left"
+  },
+
+  // ── WILLIAM ERNEST HENLEY ─────────────────────────────────────────────────
+  {
+    id: 117,
+    text: "Out of the night that covers me,\n      Black as the pit from pole to pole,\nI thank whatever gods may be\n      For my unconquerable soul.\n\nIn the fell clutch of circumstance\n      I have not winced nor cried aloud.\nUnder the bludgeonings of chance\n      My head is bloody, but unbowed.\n\nBeyond this place of wrath and tears\n      Looms but the Horror of the shade,\nAnd yet the menace of the years\n      Finds and shall find me unafraid.\n\nIt matters not how strait the gate,\n      How charged with punishments the scroll,\nI am the master of my fate,\n      I am the captain of my soul.",
+    attribution: "— William Ernest Henley",
+    source: "Invictus",
+    mood: "defiant-political",
+    length: "long",
+    animation: "letterpress",
+    font: "fl718-font-archival",
     layout: "left"
   },
 

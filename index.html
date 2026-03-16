@@ -1,9 +1,27 @@
 <!DOCTYPE html>
+<!--
+  Dánlann: The Poetry Machine
+  © 2026 Seamus Dolan / Flaneur 718. All rights reserved.
+
+  This page, including its concept, name, editorial voice, quote curation,
+  visual design, and animation code, is original work by Seamus Dolan.
+  No portion may be reproduced, copied, or adapted without written permission.
+
+  flaneur718.com
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flaneur 718 — Quotes — Prototype</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dánlann: The Poetry Machine — Flaneur 718</title>
+
+  <!-- Authorship & copyright -->
+  <meta name="author" content="Seamus Dolan / Flaneur 718">
+  <meta name="copyright" content="© 2026 Seamus Dolan / Flaneur 718. All rights reserved.">
+  <meta name="description" content="Dánlann: The Poetry Machine — a curated scroll experience by Seamus Dolan / Flaneur 718.">
+  <meta property="og:site_name" content="Flaneur 718">
+  <meta property="og:title" content="Dánlann: The Poetry Machine">
+  <meta property="og:description" content="A curated scroll experience by Seamus Dolan / Flaneur 718. © 2026 All rights reserved.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -115,6 +133,13 @@
     #fl718-quote-block.fl718-layout-center { text-align: center; max-width: 65ch; margin-left: auto; margin-right: auto; }
     #fl718-quote-block.fl718-layout-display { text-align: center; }
 
+    /* Balance line widths on centered layouts to prevent orphaned words (1-2 word last lines).
+       Must target .fl718-quote-text directly to override the base text-wrap: pretty. */
+    #fl718-quote-block.fl718-layout-center .fl718-quote-text,
+    #fl718-quote-block.fl718-layout-display .fl718-quote-text {
+      text-wrap: balance;
+    }
+
     .fl718-layout-left .fl718-rule       { margin-left: 0; margin-right: auto; }
     .fl718-layout-left .fl718-attribution { text-align: left; }
     .fl718-layout-display .fl718-rule    { width: 30%; }
@@ -147,6 +172,7 @@
       color: var(--fl718-text, #f5f0e8);
       white-space: pre-line;
       overflow-wrap: anywhere; /* Safari fix: prevents char-split spaces from blocking line wraps */
+      text-wrap: pretty; /* left-aligned prose: prevents orphaned last word */
       transition: color 0.7s ease;
     }
 
@@ -157,13 +183,13 @@
     }
 
     #fl718-quote-block.fl718-length-long .fl718-quote-text {
-      font-size: clamp(1.05rem, 1.9vw, 1.55rem);
-      line-height: 1.8;
+      font-size: clamp(1.3rem, 3.2vw, 2.8rem);
+      line-height: 1.65;
     }
 
     /* Dense: poems with many line breaks — tighter to fit viewport */
     #fl718-quote-block.fl718-length-long.fl718-dense-lines .fl718-quote-text {
-      font-size: clamp(1.05rem, 2vw, 1.55rem);
+      font-size: clamp(1.3rem, 2.8vw, 2.3rem);
       line-height: 1.5;
     }
 
@@ -172,23 +198,67 @@
       line-height: 1.3;
     }
 
+    /* Blake — A Poison Tree (id=84): slightly larger than the dense-lines default */
+    #fl718-quote-block[data-quote-id="84"] .fl718-quote-text {
+      font-size: clamp(1.6rem, 3.4vw, 2.8rem);
+    }
+
+    /* Tartt — The Goldfinch "holy rage" (id=57): nudge up from dense-lines default */
+    #fl718-quote-block[data-quote-id="57"] .fl718-quote-text {
+      font-size: clamp(1.5rem, 3.1vw, 2.6rem);
+    }
+
     /* Mobile: shrink long/dense prose quotes so they don't overflow the viewport.
        On mobile, clamp() floor is always hit (vw value < floor), so we must
        override the floor directly. Tighter line-height compounds the saving. */
     @media (max-width: 480px) {
+      /* Balance all quote text on mobile to prevent orphaned words (1-2 word lines).
+         Falls back silently for blocks >6 rendered lines, protecting long prose. */
+      .fl718-quote-text {
+        text-wrap: balance;
+      }
       #fl718-quote-block.fl718-length-long .fl718-quote-text {
-        font-size: clamp(0.875rem, 1.9vw, 1.55rem);
+        font-size: clamp(0.95rem, 3.5vw, 1.4rem);
         line-height: 1.65;
       }
       #fl718-quote-block.fl718-length-long.fl718-dense-lines .fl718-quote-text {
-        font-size: clamp(0.875rem, 2vw, 1.55rem);
+        font-size: clamp(0.9rem, 3.2vw, 1.3rem);
         line-height: 1.45;
+      }
+      /* Short display quotes (e.g. "Sanity is not statistical.") —
+         scale down slightly so short statements fit on fewer lines */
+      #fl718-quote-block.fl718-length-short .fl718-quote-text {
+        font-size: clamp(1.65rem, 5.5vw, 2.4rem);
       }
     }
 
     #fl718-quote-block.fl718-length-short .fl718-quote-text {
       font-size: clamp(2.4rem, 6vw, 5rem);
       line-height: 1.15;
+    }
+
+    /* ── Per-quote font overrides (must come after length-class rules) ── */
+
+    /* Canibus — Master Thesis (id=42): monospace lines too wide at standard size */
+    #fl718-quote-block[data-quote-id="42"] .fl718-quote-text {
+      font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+    }
+
+    /* Aesop Rock — 39 Thieves (id=69): "BUILD." orphaned at short/display size */
+    #fl718-quote-block[data-quote-id="69"] .fl718-quote-text {
+      font-size: clamp(2rem, 4.8vw, 3.8rem);
+    }
+
+    /* Aesop Rock — Battery (id=71): "me" orphaned on last line */
+    #fl718-quote-block[data-quote-id="71"] .fl718-quote-text {
+      font-size: clamp(1.6rem, 3.4vw, 2.8rem);
+    }
+
+    /* Zack Hemsey — Lessons from a Nomad (id=96): 4 stanzas shrink too small at long size.
+       Extra class needed to beat .fl718-length-long.fl718-dense-lines specificity. */
+    #fl718-quote-block.fl718-length-long[data-quote-id="96"] .fl718-quote-text {
+      font-size: clamp(1.05rem, 1.95vw, 1.65rem);
+      line-height: 1.4;
     }
 
     /* ── Attribution ─────────────────────────────────────────────── */
@@ -220,6 +290,11 @@
 
     .fl718-attribution-source.is-visible { display: block; }
 
+    @media (max-width: 768px) {
+      .fl718-attribution-name   { font-size: 0.70rem; }
+      .fl718-attribution-source { font-size: 0.60rem; }
+    }
+
     @media (max-width: 480px) {
       .fl718-attribution-name   { font-size: 0.72rem; }
       .fl718-attribution-source { font-size: 0.62rem; }
@@ -234,28 +309,18 @@
     .fl718-font-expressive .fl718-quote-text { font-family: 'Abril Fatface', Georgia, serif; font-style: normal; font-weight: 400; }
 
 
-    /* ── Scroll hint ─────────────────────────────────────────────── */
+    /* ── Scroll hint (inline with watermark) ─────────────────────── */
 
-    #fl718-scroll-hint {
-      position: fixed;
-      bottom: 2.25rem;
-      bottom: calc(2.25rem + env(safe-area-inset-bottom, 0px));
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: 'DM Mono', monospace;
-      font-size: 0.48rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: #f5f0e8;
+    #fl718-scroll-hint-wm {
       opacity: 0;
-      white-space: nowrap;
-      pointer-events: none;
-      user-select: none;
       transition: opacity 0.8s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55em;
     }
 
-    #fl718-scroll-hint.is-visible { opacity: 0.16; }
-    #fl718-scroll-hint.is-hidden  { opacity: 0; }
+    #fl718-scroll-hint-wm.is-visible { opacity: 1; }
+    #fl718-scroll-hint-wm.is-hidden  { opacity: 0; }
 
     /* ── Prevent Uncode bleed (production safety) ────────────────── */
 
@@ -523,11 +588,120 @@
       position: absolute;
       bottom: 7%; left: 50%; transform: translateX(-50%);
       font-family: 'DM Mono', monospace;
-      font-size: clamp(0.38rem, 0.7vw, 0.56rem);
+      font-size: clamp(0.65rem, 1.1vw, 0.95rem);
       letter-spacing: 0.28em; text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.22);
+      color: rgba(255, 255, 255, 0.88);
+      text-shadow: 0 1px 4px rgba(0,0,0,0.35);
       white-space: nowrap; pointer-events: none; user-select: none;
     }
+
+    /* ── Cold open title card ─────────────────────────────────────── */
+
+    #fl718-title-card {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .fl718-tc-rule {
+      width: 1px;
+      height: 0;
+      background: rgba(245, 237, 224, 0.2);
+      margin: 1.6rem 0;
+    }
+
+    .fl718-tc-irish {
+      font-family: 'IM Fell English', 'Times New Roman', serif;
+      font-size: clamp(3.2rem, 8vw, 7rem);
+      font-weight: 400;
+      color: #f5ede0;
+      letter-spacing: 0.06em;
+      text-align: center;
+      line-height: 1;
+    }
+
+    .fl718-tc-accent { color: #e8d4b8; }
+
+    #fl718-tc-english {
+      font-family: 'DM Mono', 'Courier New', monospace;
+      font-size: clamp(0.6rem, 1vw, 0.82rem);
+      font-weight: 300;
+      color: #a89e94;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .fl718-tc-pronunciation {
+      font-family: 'DM Mono', monospace;
+      font-size: clamp(0.48rem, 0.7vw, 0.6rem);
+      letter-spacing: 0.22em;
+      color: rgba(168, 158, 148, 0.5);
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 0.9rem;
+    }
+
+    /* ── Persistent bottom watermark ─────────────────────────────── */
+
+    #fl718-wm {
+      position: fixed;
+      bottom: 1.6rem;
+      bottom: calc(1.6rem + env(safe-area-inset-bottom, 0px));
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'DM Mono', 'Courier New', monospace;
+      font-size: clamp(0.54rem, 0.72vw, 0.64rem);
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #a89e94;
+      opacity: 0;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 0.55em;
+    }
+
+    #fl718-wm .wm-irish {
+      font-family: 'IM Fell English', Georgia, serif;
+      font-style: normal;
+      font-size: 1.15em;
+      letter-spacing: 0.06em;
+      text-transform: none;
+      color: #c8b99a;
+    }
+
+    #fl718-wm .wm-sep {
+      font-size: 0.7em;
+      color: rgba(168, 158, 148, 0.45);
+      letter-spacing: 0;
+    }
+
+    /* ── Page-level copyright ──────────────────────────────────────── */
+
+    .fl718-copyright {
+      position: fixed;
+      bottom: 10px;
+      right: 14px;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      color: rgba(255, 255, 255, 0.22);
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      pointer-events: none;
+      z-index: 9999;
+      user-select: none;
+    }
+
   </style>
 </head>
 
@@ -557,6 +731,22 @@
   <div id="fl718-stone" aria-hidden="true"></div>
   <svg id="fl718-ripple-svg" aria-hidden="true"></svg>
 
+  <!-- Cold open title card — shown once on first load, then removed from layout -->
+  <div id="fl718-title-card" aria-label="Dánlann: The Poetry Machine" role="heading" aria-level="1">
+    <div class="fl718-tc-irish">D<span class="fl718-tc-accent">á</span>nlann</div>
+    <div class="fl718-tc-rule" id="fl718-tc-rule"></div>
+    <div id="fl718-tc-english">The Poetry Machine</div>
+    <div class="fl718-tc-pronunciation">dawn · lahn</div>
+  </div>
+
+  <!-- Persistent bottom watermark — fades in as title card exits -->
+  <div id="fl718-wm" aria-hidden="true">
+    <span class="wm-irish">Dánlann</span>
+    <span class="wm-sep">✦</span>
+    <span class="wm-eng">The Poetry Machine</span>
+    <span id="fl718-scroll-hint-wm"><span class="wm-sep">✦</span>Scroll or swipe</span>
+  </div>
+
   <!-- Quote stage -->
   <div id="fl718-quotes-root">
     <div id="fl718-quote-block">
@@ -570,7 +760,6 @@
     </div>
   </div>
 
-<div id="fl718-scroll-hint" aria-hidden="true">Scroll or swipe</div>
 
   <!-- Quote data -->
   <script src="quotes.js"></script>
@@ -595,7 +784,7 @@
       var footerEl  = block.querySelector('.fl718-attribution');
       var ruleTopEl = block.querySelector('.fl718-rule--top');
       var ruleBotEl = block.querySelector('.fl718-rule--bottom');
-      var hintEl    = document.getElementById('fl718-scroll-hint');
+      var hintEl    = document.getElementById('fl718-scroll-hint-wm');
       var navMapSvg = document.getElementById('fl718-nav-map');
       var threadSvg = document.getElementById('fl718-thread-svg');
       var stoneEl   = document.getElementById('fl718-stone');
@@ -697,7 +886,7 @@
 
       function buildDeck(excludeIndex) {
         // Try to resume a saved deck from a previous session first.
-        // This is what makes all 111 quotes cycle through before any repeat.
+        // This is what makes all 123 quotes cycle through before any repeat.
         var indices = loadDeckState();
 
         if (!indices) {
@@ -847,7 +1036,8 @@
         var wordCount = quote.text.trim().split(/\s+/).length;
         if ((lengthCls === 'long' && lineCount >= 12) ||
             (lengthCls === 'standard' && lineCount >= 8) ||
-            (lengthCls === 'long' && wordCount >= 130 && lineCount < 5)) {
+            (lengthCls === 'long' && wordCount >= 130 && lineCount < 5) ||
+            (lengthCls === 'long' && lineCount >= 16)) {
           block.classList.add('fl718-dense-lines');
         }
 
@@ -859,9 +1049,28 @@
         gsap.set([footerEl, ruleTopEl, ruleBotEl, nameEl, sourceEl], { clearProps: 'opacity,filter' });
         gsap.set(block, { opacity: 0 });
 
-        // Scroll affordance: show bottom fade when content overflows the block
+        // Fit quote text to viewport: reset any previous inline size, then shrink
+        // only if the content actually overflows — never reduce unnecessarily.
+        quoteEl.style.fontSize = '';
         requestAnimationFrame(function () {
-          if (block.scrollHeight > block.clientHeight + 4) {
+          var natural = parseFloat(window.getComputedStyle(quoteEl).fontSize);
+          // Floor: allow up to 45% reduction from the CSS-computed natural size.
+          // This lets very long poems (16+ lines) shrink enough to fit the viewport
+          // while still staying above a readable minimum (~24px for a 44px base).
+          // Extreme overflowers (Bukowski, Invictus) will hit the floor and get
+          // the scroll affordance instead of being crushed further.
+          var floor = Math.max(14, natural * 0.55);
+          var maxSteps = 20;
+          var step = 0;
+          while (block.scrollHeight > block.clientHeight + 2 && step < maxSteps) {
+            var current = parseFloat(window.getComputedStyle(quoteEl).fontSize);
+            if (current <= floor) break;
+            quoteEl.style.fontSize = (current * 0.94) + 'px';
+            step++;
+          }
+          // If content still overflows after the floor, show scroll affordance
+          // rather than crushing font further.
+          if (block.scrollHeight > block.clientHeight + 2) {
             block.classList.add('fl718-has-overflow');
           } else {
             block.classList.remove('fl718-has-overflow');
@@ -949,8 +1158,13 @@
           currentIndex = idx;
           currentQuote = nextQuote;
           renderQuote(nextQuote);
-          runEntrance(nextQuote, function () {
-            isTransitioning = false;
+          // Defer one frame so renderQuote's RAF font-fit finishes before the
+          // entrance animation starts — otherwise the font-size reflow fires
+          // mid-animation and causes word spans to jump to new positions.
+          requestAnimationFrame(function () {
+            runEntrance(nextQuote, function () {
+              isTransitioning = false;
+            });
           });
         });
       }
@@ -1111,6 +1325,14 @@
         gsap.set(block, { opacity: 1 });
         var chars = mbSplit(quoteEl);
         var timestamps = mbTimestamps(chars.length);
+        // Cap total entrance at 8s so long quotes don't lock navigation
+        var totalMs = timestamps[timestamps.length - 1];
+        if (totalMs > 8000) {
+          var scale = 8000 / totalMs;
+          for (var ti = 0; ti < timestamps.length; ti++) {
+            timestamps[ti] = Math.round(timestamps[ti] * scale);
+          }
+        }
         chars.forEach(function (char, i) {
           setTimeout(function () {
             if (char.classList.contains('space')) { char.style.opacity = '1'; return; }
@@ -1556,7 +1778,7 @@
         ssBuildThreads(letters, textColor);
         gsap.ticker.add(ssTickerUpdate);
 
-        var stagger  = isLong ? 0.06 : 0.035;
+        var stagger  = isLong ? Math.min(0.06, 3.5 / Math.max(letters.length, 1)) : 0.035;
         var duration = isLong ? 0.75 : 0.85;
 
         ssEntranceTween = gsap.to(letters, {
@@ -2432,8 +2654,30 @@
       // INPUT HANDLERS
       // ================================================================
 
+      // Helper: is the overflow block scrolled to the bottom (within 5px tolerance)?
+      function blockAtBottom() {
+        return block.scrollTop + block.clientHeight >= block.scrollHeight - 5;
+      }
+      function blockAtTop() {
+        return block.scrollTop <= 0;
+      }
+
       var wheelCooldown = false;
-      window.addEventListener('wheel', function () {
+      window.addEventListener('wheel', function (e) {
+        // When a quote overflows, scroll within the block before navigating away.
+        // body has overflow:hidden so native wheel won't scroll the block — we do it manually.
+        if (block.classList.contains('fl718-has-overflow')) {
+          var down = e.deltaY > 0;
+          if (down && !blockAtBottom()) {
+            block.scrollTop += Math.min(Math.abs(e.deltaY), 80);
+            return;
+          }
+          if (!down && !blockAtTop()) {
+            block.scrollTop -= Math.min(Math.abs(e.deltaY), 80);
+            return;
+          }
+          // Reached top or bottom — fall through to normal navigation below.
+        }
         if (wheelCooldown) return;
         wheelCooldown = true;
         setTimeout(function () { wheelCooldown = false; }, 150);
@@ -2441,18 +2685,60 @@
       }, { passive: true });
 
       var touchStartY = 0;
+      var touchScrolled = false;
       window.addEventListener('touchstart', function (e) {
         touchStartY = e.touches[0].clientY;
+        touchScrolled = false;
+      }, { passive: true });
+      window.addEventListener('touchmove', function (e) {
+        if (block.classList.contains('fl718-has-overflow')) {
+          var delta = touchStartY - e.touches[0].clientY;
+          if ((delta > 0 && !blockAtBottom()) || (delta < 0 && !blockAtTop())) {
+            block.scrollTop += delta;
+            touchStartY = e.touches[0].clientY;
+            touchScrolled = true;
+          }
+        }
       }, { passive: true });
       window.addEventListener('touchend', function (e) {
+        if (touchScrolled) return;
         if (Math.abs(touchStartY - e.changedTouches[0].clientY) >= 50) transition();
       }, { passive: true });
 
       window.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowDown' || e.key === 'ArrowUp' || e.key === ' ') {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+          e.preventDefault();
+          if (block.classList.contains('fl718-has-overflow') && !blockAtBottom()) {
+            block.scrollTop += 120;
+            return;
+          }
+          transition();
+        }
+        if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (block.classList.contains('fl718-has-overflow') && !blockAtTop()) {
+            block.scrollTop -= 120;
+            return;
+          }
+          transition();
+        }
+        if (e.key === 'ArrowLeft') {
           e.preventDefault();
           transition();
         }
+      });
+
+      // ── Resize handler — re-run font-fit when viewport changes ────
+      var resizeTimer = null;
+      var lastW = window.innerWidth, lastH = window.innerHeight;
+      window.addEventListener('resize', function () {
+        if (resizeTimer) clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          var newW = window.innerWidth, newH = window.innerHeight;
+          if (Math.abs(newW - lastW) < 50 && Math.abs(newH - lastH) < 50) return;
+          lastW = newW; lastH = newH;
+          if (!isTransitioning && currentQuote) renderQuote(currentQuote);
+        }, 250);
       });
 
       // ================================================================
@@ -2468,28 +2754,115 @@
       };
 
       // ================================================================
+      // COLD OPEN
+      // ================================================================
+
+      function runColdOpen(onComplete) {
+        var titleCard = document.getElementById('fl718-title-card');
+        var irishLine = titleCard.querySelector('.fl718-tc-irish');
+        var tcRule    = document.getElementById('fl718-tc-rule');
+        var tcEnglish = document.getElementById('fl718-tc-english');
+        var pronLine  = titleCard.querySelector('.fl718-tc-pronunciation');
+        var wm        = document.getElementById('fl718-wm');
+
+        if (prefersReducedMotion) {
+          gsap.set(titleCard, { display: 'none' });
+          gsap.set(wm, { opacity: 0.32 });
+          onComplete();
+          return;
+        }
+
+        gsap.set(titleCard, { opacity: 0, display: 'flex' });
+        gsap.set([irishLine, tcEnglish, pronLine], { opacity: 0, y: 0 });
+        gsap.set(irishLine, { y: 14 });
+        gsap.set(tcRule, { height: 0, opacity: 0 });
+        gsap.set(wm, { opacity: 0 });
+
+        var tl = gsap.timeline({ onComplete: onComplete });
+
+        // Entrance
+        tl.to(titleCard, { opacity: 1, duration: 0.4, ease: 'power1.out' });
+        tl.to(irishLine, { opacity: 1, y: 0, duration: 1.1, ease: 'power2.out' }, '-=0.1');
+        tl.to(tcRule,    { opacity: 1, height: 40, duration: 0.9, ease: 'power2.out' }, '-=0.6');
+        tl.to(tcEnglish, { opacity: 1, duration: 0.9, ease: 'power1.out' }, '-=0.4');
+        tl.to(pronLine,  { opacity: 1, duration: 0.7, ease: 'power1.out' }, '-=0.4');
+
+        // Hold
+        tl.to({}, { duration: 2.4 });
+
+        // Exit — Irish name lifts, English descends toward its permanent home
+        tl.to(irishLine, { y: -60, opacity: 0, duration: 1.1, ease: 'power2.in' });
+        tl.to(tcRule,    { height: 0, opacity: 0, duration: 0.6, ease: 'power2.in' }, '-=0.9');
+        tl.to(pronLine,  { opacity: 0, duration: 0.5, ease: 'power1.in' }, '-=1.0');
+        tl.to(tcEnglish, { opacity: 0, y: 30, duration: 0.8, ease: 'power2.in' }, '-=0.7');
+        // Watermark fades in as tcEnglish fades out — hand-off
+        tl.to(wm, { opacity: 0.32, duration: 1.0, ease: 'power1.out' }, '-=0.5');
+        tl.set(titleCard, { display: 'none' });
+      }
+
+      // ================================================================
       // INIT
       // ================================================================
 
       function init() {
+        // URL hash #q=N jumps straight to quote with id N (dev/test shortcut)
+        var hashMatch = window.location.hash.match(/q=(\d+)/);
         deck         = buildDeck();
-        currentIndex = deck.shift();
+        if (hashMatch) {
+          var qId = parseInt(hashMatch[1], 10);
+          var qIdx = -1;
+          for (var qi = 0; qi < fl718Quotes.length; qi++) {
+            if (fl718Quotes[qi].id === qId) { qIdx = qi; break; }
+          }
+          if (qIdx >= 0) {
+            currentIndex = qIdx;
+            deck = deck.filter(function (i) { return i !== qIdx; });
+          } else {
+            currentIndex = deck.shift();
+          }
+        } else {
+          currentIndex = deck.shift();
+        }
         saveDeckState(); // persist remaining deck after first quote consumed
         currentQuote = fl718Quotes[currentIndex];
         renderQuote(currentQuote);
 
-        // First quote arrives with its own entrance animation
+        // Cold open plays once per session (not on every page visit)
+        var coldOpenDone = false;
+        try { coldOpenDone = !!sessionStorage.getItem('fl718-cold-open-done'); } catch(e) {}
+
         isTransitioning = true;
-        runEntrance(currentQuote, function () {
-          isTransitioning = false;
-          hintEl.classList.add('is-visible');
-        });
+        var startQuote = function () {
+          // Same one-frame defer: let renderQuote's RAF font-fit finish first.
+          requestAnimationFrame(function () {
+            runEntrance(currentQuote, function () {
+              isTransitioning = false;
+              hintEl.classList.add('is-visible');
+            });
+          });
+        };
+
+        if (coldOpenDone) {
+          // Return visit: show watermark immediately, skip title card
+          var wm = document.getElementById('fl718-wm');
+          var tc = document.getElementById('fl718-title-card');
+          if (tc) gsap.set(tc, { display: 'none' });
+          if (wm) gsap.set(wm, { opacity: 0.32 });
+          startQuote();
+        } else {
+          try { sessionStorage.setItem('fl718-cold-open-done', '1'); } catch(e) {}
+          runColdOpen(startQuote);
+        }
       }
 
       init();
 
     })();
   </script>
+
+
+  <!-- Page-level copyright notice -->
+  <p class="fl718-copyright" aria-hidden="true">© 2026 Seamus Dolan / Flaneur 718</p>
 
 </body>
 </html>
