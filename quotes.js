@@ -366,7 +366,7 @@ var fl718Quotes = [
   // ── PEARL JAM ─────────────────────────────────────────────────────────────
   {
     id: 29,
-    text: "Alone, listless\nBreakfast table in an otherwise empty room\nYoung girl, violence\nCenter of her own attention\nThe mother reads aloud, child tries to understand it\nTries to make her proud\nThe shades go down, it\u2019s in her head\nPainted room, can\u2019t deny there\u2019s something wrong\nDon\u2019t call me daughter, not fit to\nThe picture kept will remind me\nDon\u2019t call me daughter, not fit to\nThe picture kept will remind me\nDon\u2019t call me",
+    text: "Alone, listless\nBreakfast table in an otherwise empty room\nYoung girl, violence\nCenter of her own attention\nThe mother reads aloud,\nchild tries to understand it\nTries to make her proud\nThe shades go down, it\u2019s in her head\nPainted room,\ncan\u2019t deny there\u2019s something wrong\nDon\u2019t call me daughter, not fit to\nThe picture kept will remind me\nDon\u2019t call me daughter, not fit to\nThe picture kept will remind me\nDon\u2019t call me",
     attribution: "— Pearl Jam",
     source: "Daughter",
     mood: "dark-raw",
@@ -451,7 +451,7 @@ var fl718Quotes = [
   },
   {
     id: 36,
-    text: "And death shall have no dominion.\nDead men naked they shall be one\nWith the man in the wind and the west moon;\nWhen their bones are picked clean and the clean bones gone,\nThey shall have stars at elbow and foot;\nThough they go mad they shall be sane,\nThough they sink through the sea they shall rise again;\nThough lovers be lost love shall not;\nAnd death shall have no dominion.",
+    text: "And death shall have no dominion.\nDead men naked they shall be one\nWith the man in the wind and the west moon;\nWhen their bones are picked clean and the clean bones gone,\nThey shall have stars at elbow and foot;\nThough they go mad they shall be sane,\nThough they sink through the sea\nthey shall rise again;\nThough lovers be lost love shall not;\nAnd death shall have no dominion.",
     attribution: "— Dylan Thomas",
     source: "And Death Shall Have No Dominion",
     mood: "dark-raw",
@@ -797,7 +797,7 @@ var fl718Quotes = [
   // ── RABINDRANATH TAGORE ───────────────────────────────────────────────────
   {
     id: 60,
-    text: "Where the mind is without fear\nand the head is held high;\nWhere knowledge is free;\nWhere the world has not been broken up\ninto fragments by narrow domestic walls;\nWhere words come out from the depth of truth;\nWhere tireless striving stretches its arms toward perfection;\nWhere the clear stream of reason has not lost its way\ninto the dreary desert sand of dead habit;\nWhere the mind is led forward by Thee\ninto ever-widening thought and action —\nInto that heaven of freedom,\nmy Father, let my country awake.",
+    text: "Where the mind is without fear\nand the head is held high;\nWhere knowledge is free;\nWhere the world has not been broken up\ninto fragments by narrow domestic walls;\nWhere words come out from the depth of truth;\nWhere tireless striving stretches its arms\ntoward perfection;\nWhere the clear stream of reason\nhas not lost its way\ninto the dreary desert sand of dead habit;\nWhere the mind is led forward by Thee\ninto ever-widening thought and action —\nInto that heaven of freedom,\nmy Father, let my country awake.",
     attribution: "— Rabindranath Tagore",
     source: "Where the Mind is Without Fear",
     mood: "defiant-political",
@@ -952,7 +952,7 @@ var fl718Quotes = [
   },
   {
     id: 73,
-    text: "Well it appears the scars of learning have spoken\nSome are burning, some are frozen\nSome deserve tall tales, some have wrote them\nSome are just a brutal repercussion of devotion\nMine are all of the above \u2019cause everything leads to erosion",
+    text: "Well it appears the scars of learning have spoken\nSome are burning, some are frozen\nSome deserve tall tales, some have wrote them\nSome are just a brutal repercussion of devotion\nMine are all of the above\n\u2019cause everything leads to erosion",
     attribution: "— Aesop Rock",
     source: "Battery",
     mood: "dark-raw",

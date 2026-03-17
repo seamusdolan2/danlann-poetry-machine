@@ -212,23 +212,50 @@
        On mobile, clamp() floor is always hit (vw value < floor), so we must
        override the floor directly. Tighter line-height compounds the saving. */
     @media (max-width: 480px) {
-      /* Balance all quote text on mobile to prevent orphaned words (1-2 word lines).
-         Falls back silently for blocks >6 rendered lines, protecting long prose. */
-      .fl718-quote-text {
+      /* Balance only short quotes on mobile — they're always <6 rendered lines,
+         so balance redistributes cleanly. Standard and long quotes keep text-wrap:pretty
+         (from base rule) because balance stops working at >6 lines and silently
+         cancels pretty's last-line orphan protection for long prose. */
+      #fl718-quote-block.fl718-length-short .fl718-quote-text {
         text-wrap: balance;
       }
+      /* Brutal (Bebas Neue) standard-length lyrics: 28.8px is too wide at 375px (~20 CPL),
+         producing single-word overflow sub-lines on nearly every lyric line break.
+         1.35rem = ~21.6px → ~26 CPL, fits most lyric lines without wrapping. */
+      #fl718-quote-block.fl718-font-brutal.fl718-length-standard .fl718-quote-text {
+        font-size: clamp(1.35rem, 4.2vw, 1.8rem);
+        line-height: 1.5;
+      }
       #fl718-quote-block.fl718-length-long .fl718-quote-text {
-        font-size: clamp(0.95rem, 3.5vw, 1.4rem);
-        line-height: 1.65;
+        font-size: clamp(1.06rem, 3.8vw, 1.5rem);
+        line-height: 1.6;
       }
       #fl718-quote-block.fl718-length-long.fl718-dense-lines .fl718-quote-text {
-        font-size: clamp(0.9rem, 3.2vw, 1.3rem);
-        line-height: 1.45;
+        font-size: clamp(0.98rem, 3.5vw, 1.4rem);
+        line-height: 1.42;
       }
       /* Short display quotes (e.g. "Sanity is not statistical.") —
          scale down slightly so short statements fit on fewer lines */
       #fl718-quote-block.fl718-length-short .fl718-quote-text {
         font-size: clamp(1.65rem, 5.5vw, 2.4rem);
+      }
+      /* Brutal font (Bebas Neue) — max mobile size that avoids wrapping orphans
+         on short-line rap lyrics (tested across all 8 brutal long quotes at 375px) */
+      #fl718-quote-block.fl718-font-brutal.fl718-length-long .fl718-quote-text {
+        font-size: clamp(0.96rem, 4vw, 1.5rem);
+      }
+      #fl718-quote-block.fl718-font-brutal.fl718-length-long.fl718-dense-lines .fl718-quote-text {
+        font-size: clamp(0.95rem, 3.8vw, 1.4rem);
+        line-height: 1.4;
+      }
+      /* Canibus id=42: DM Mono at desktop override (1.4rem) is too wide for 375px */
+      #fl718-quote-block[data-quote-id="42"] .fl718-quote-text {
+        font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+      }
+      /* Blake id=84: desktop override (25.6px) makes every couplet wrap to single-word
+         sub-lines on mobile. Drop to 17.6px so ~36 CPL fits most Blake couplets. */
+      #fl718-quote-block[data-quote-id="84"] .fl718-quote-text {
+        font-size: clamp(1.1rem, 3.2vw, 1.6rem);
       }
     }
 
