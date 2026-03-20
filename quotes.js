@@ -16,7 +16,7 @@
 //   center   — max-width 65ch, centered. Short lyric quotes, poems with intentional short lines.
 //   display  — full width, centered, oversized type. Very short power statements.
 
-var fl718Quotes = [
+if (typeof fl718Quotes === 'undefined') var fl718Quotes = [
 
   // ── ANNIE DILLARD ─────────────────────────────────────────────────────────
   {
@@ -1513,6 +1513,43 @@ var fl718Quotes = [
     length: "long",
     animation: "letterpress",
     font: "fl718-font-archival",
+    layout: "left"
+  },
+
+  // ── NINE INCH NAILS ───────────────────────────────────────────────────────
+  {
+    id: 125,
+    text: "Broken, bruised, forgotten, sore\nToo fucked up to care anymore\nPoisoned to my rotten core\nToo fucked up to care anymore",
+    attribution: "— Nine Inch Nails",
+    source: "Somewhat Damaged",
+    mood: "dark-raw",
+    length: "short",
+    animation: "paint-drip",
+    font: "fl718-font-brutal",
+    layout: "display"
+  },
+
+  // ── BROTHER ALI ─────────────────────────────────────────────────────────────
+  {
+    id: 126,
+    text: "Granddad was in the twilight of his life\nWhen he closed his eyes tight and opened his wrists wide\nWhat make a tenth round fighter with the winning score\nDecide he need to throw the towel before the whistle blow\nMaybe I'll never know\nBut I inherited his poetic soul so the symbolism's yet to show\nWas life so obscene that death's more serene?\nOr was an old author tryin to write his own closing scene?",
+    attribution: "— Brother Ali",
+    source: "Rain Water",
+    mood: "dark-raw",
+    length: "standard",
+    animation: "darkroom-develop",
+    font: "fl718-font-literary",
+    layout: "left"
+  },
+  {
+    id: 127,
+    text: "And God's rain water flow through the same gutter that we\nWalk today gotta stay brave brother keep your lips stiff\nKeep your fist clenched\nAt times you gotta kick your way through this bitch",
+    attribution: "— Brother Ali",
+    source: "Rain Water",
+    mood: "defiant-political",
+    length: "short",
+    animation: "letterpress",
+    font: "fl718-font-brutal",
     layout: "left"
   },
 

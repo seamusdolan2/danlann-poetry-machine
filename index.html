@@ -37,7 +37,9 @@
        All 12 animations + Phase 1 engine
     ================================================================ */
 
-    *, *::before, *::after {
+    body.fl718-quotes-page *,
+    body.fl718-quotes-page *::before,
+    body.fl718-quotes-page *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -257,6 +259,11 @@
       #fl718-quote-block[data-quote-id="84"] .fl718-quote-text {
         font-size: clamp(1.1rem, 3.2vw, 1.6rem);
       }
+      /* NIN id=125: Bebas at 25.6px floor still too wide for 30-char lines at 375px.
+         Drop to 1.2rem (~19.2px) so each line holds on narrow mobile. */
+      #fl718-quote-block[data-quote-id="125"] .fl718-quote-text {
+        font-size: clamp(1.2rem, 3.8vw, 1.8rem);
+      }
     }
 
     #fl718-quote-block.fl718-length-short .fl718-quote-text {
@@ -269,6 +276,13 @@
     /* Canibus — Master Thesis (id=42): monospace lines too wide at standard size */
     #fl718-quote-block[data-quote-id="42"] .fl718-quote-text {
       font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+    }
+
+    /* NIN — Somewhat Damaged (id=125): Bebas Neue at short size orphans "ANYMORE"
+       and "CORE" on their own lines at desktop. Cap to 3.2rem so all 4 source
+       lines hold together at 1280px+. */
+    #fl718-quote-block[data-quote-id="125"] .fl718-quote-text {
+      font-size: clamp(1.6rem, 3.8vw, 3.2rem);
     }
 
     /* Aesop Rock — 39 Thieves (id=69): "BUILD." orphaned at short/display size */
@@ -993,7 +1007,9 @@
         } catch (e) { return null; }
       }
 
-      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var rmMq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var prefersReducedMotion = rmMq.matches;
+      rmMq.addEventListener('change', function (e) { prefersReducedMotion = e.matches; });
 
       // ── SVG filter refs ───────────────────────────────────────────
 
@@ -1206,7 +1222,14 @@
           block.classList.add('fl718-dense-lines');
         }
 
-        body.className = 'fl718-quotes-page fl718-mood-' + quote.mood;
+        body.classList.remove(
+          'fl718-mood-dark-raw',
+          'fl718-mood-tender-literary',
+          'fl718-mood-defiant-political',
+          'fl718-mood-contemplative-ancient',
+          'fl718-mood-wild-electric'
+        );
+        body.classList.add('fl718-mood-' + quote.mood);
 
         // Clear per-element opacity overrides from previous animations
         // Must include nameEl/sourceEl — several exits (string-stitch, card-shuffle,
@@ -2867,7 +2890,15 @@
       }, { passive: true });
       window.addEventListener('touchend', function (e) {
         if (touchScrolled) return;
-        if (Math.abs(touchStartY - e.changedTouches[0].clientY) >= 50) transition();
+        var swipeDist = Math.abs(touchStartY - e.changedTouches[0].clientY);
+        if (swipeDist < 50) return;
+        // If block is overflowing, suppress navigation when swipe has nowhere to scroll
+        if (block.classList.contains('fl718-has-overflow')) {
+          var swipingDown = (touchStartY - e.changedTouches[0].clientY) > 0;
+          if (swipingDown && !blockAtBottom()) return;
+          if (!swipingDown && !blockAtTop()) return;
+        }
+        transition();
       }, { passive: true });
 
       window.addEventListener('keydown', function (e) {
